@@ -1,0 +1,39 @@
+[*]
+charset=utf-8
+# Unix-style newlines with a newline ending every file
+end_of_line=lf
+insert_final_newline = true
+insert_final_newline=false
+indent_style=space
+indent_size=2
+trim_trailing_whitespace = true
+
+[{.babelrc,.stylelintrc,jest.config,.eslintrc,*.bowerrc,*.jsb3,*.jsb2}]
+indent_style=space
+indent_size=2
+
+[{*.mod,*.dtd,*.ent,*.elt}]
+indent_style=space
+indent_size=2
+
+[{*.xml.*,*.jhm,*.dbc,*.xslt,*.xul,*.rng,*.xsl,*.xsd,*.ant,*.tld,*.fxml,*.jrxml,*.xml,*.jnlp,*.wsdl,*.pom,*.gradle}]
+indent_style=space
+indent_size=2
+
+[*.java]
+indent_style = space
+indent_size = 2
+continuation_indent_size = 0
+
+[*.vm]
+indent_style = space
+indent_size = 2
+
+[*.xml]
+indent_style = space
+indent_size = 2
+
+[*.json]
+indent_style=space
+indent_size=2
+

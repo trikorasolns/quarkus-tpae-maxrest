@@ -63,7 +63,7 @@ public class MaximoRestWorkorderServiceImpl {
       COMMON_LOG.debug("#getByPKey(String,String,String)...");
       COMMON_LOG.debug("psrecordId: " + psrecordId);
     }
-    return woMboService.getByIdAsync(userName, userPwd, psrecordId, phmUrlParameters);
+    return woMboService.getById(userName, userPwd, psrecordId, phmUrlParameters);
   }
 
   /*
@@ -77,7 +77,7 @@ public class MaximoRestWorkorderServiceImpl {
       COMMON_LOG.debug("wonum: " + psRecurdNum);
       COMMON_LOG.debug("siteid: " + psSiteId);
     }
-    return woMboService.getByNumAsync(userName, userPwd, psRecurdNum, psSiteId, phmUrlParameters);
+    return woMboService.getByNum(userName, userPwd, psRecurdNum, psSiteId, phmUrlParameters);
   }
 
   public Multi<JsonObject> query(String userName, String userPwd, HashMap<String, String> phmUrlParameters) {
@@ -126,7 +126,7 @@ public class MaximoRestWorkorderServiceImpl {
   }
 
   public Uni<JsonObject> getFull(String userName, String userPwd, String recordId, Map<String, String> hmUrlParameters) {
-    return woMboService.getByIdAsync(userName, userPwd, recordId, hmUrlParameters);
+    return woMboService.getById(userName, userPwd, recordId, hmUrlParameters);
   }
 
   public Uni<JsonObject> addDocument(String userName, String userPwd, String pSrecordId, String pSdocType, String pSurlType, String psdescription, String psfileName, String... pSdocumentData) {

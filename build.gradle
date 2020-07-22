@@ -1,0 +1,125 @@
+plugins {
+  id 'java'
+  id 'io.quarkus'
+  id 'org.kordamp.gradle.jandex' version "${kordampGradleJandexVersion}"
+}
+
+group 'com.trikorasolutions.quarkus.tpae.rest'
+description 'Trikora Solutions :: Middleware :: IBM Maximo Rest'
+
+defaultTasks 'quarkusBuild', 'check'
+
+def getTimestamp() {
+  return new Date().format('yyyyMMddHHmmss')
+}
+
+configure(rootProject) {
+  file("$rootDir/version.properties").withReader {
+    Properties props = new Properties()
+    props.load(it)
+    project.ext.propVer = props
+  }
+  ext.myVersion = ext.propVer.get('myVersion') - 'SNAPSHOT'
+
+  if (System.hasProperty('buildVersion')) {
+    version = myVersion + System.getProperty('buildVersion')
+  } else if (System.getenv().containsKey('buildVersion')) {
+    version = myVersion + System.getenv('buildVersion')
+  } else if (project.hasProperty('buildVersion')) {
+    version = myVersion + buildVersion
+  } else {
+    def timestamp = getTimestamp()
+    version = myVersion + 'SNAPSHOT-' + timestamp
+  }
+  println "version: ${version}"
+}
+
+
+// ### PROJECTS ####
+repositories {
+  mavenLocal()
+  mavenCentral()
+}
+
+// ### PLUGINS ####
+apply plugin: 'java'
+apply plugin: JavaPlugin
+apply plugin: 'maven'
+apply plugin: 'maven-publish'
+apply plugin: 'idea'
+apply plugin: 'org.kordamp.gradle.jandex'
+
+compileJava {
+  options.fork = true
+  options.encoding = 'UTF-8'
+  options.compilerArgs << '-parameters'
+}
+
+java {
+  sourceCompatibility = JavaVersion.VERSION_11
+  targetCompatibility = JavaVersion.VERSION_11
+}
+
+test {
+  systemProperty "java.util.logging.manager", "org.jboss.logmanager.LogManager"
+}
+
+sourceSets {
+  main {
+    java {
+      srcDirs = ['src/main/java']
+    }
+    resources {
+      srcDir 'src/main/resources'
+    }
+  }
+
+  test {
+    java {
+      srcDirs = ['src/test/java']
+    }
+    resources {
+      srcDir 'src/test/resources'
+    }
+  }
+}
+
+publishing {
+  publications {
+    maven(MavenPublication) {
+      from components.java
+      artifactId "${project.name}"
+      groupId "${group}"
+      version "${version}"
+    }
+  }
+}
+
+// Resources filter.
+processResources {
+  Properties gradleProps = new Properties()
+  gradleProps.load(new FileInputStream(rootDir.toString() + '/gradle.properties'))
+  filter(org.apache.tools.ant.filters.ReplaceTokens, tokens: gradleProps)
+  filter(org.apache.tools.ant.filters.ReplaceTokens, tokens: [
+      artifactId: project.name
+  ])
+}
+
+test {
+  systemProperties(System.getProperties())
+}
+
+dependencies {
+  // Quarkus
+  implementation enforcedPlatform([group: quarkusPlatformGroupId, name: quarkusPlatformArtifactId, version: quarkusPlatformVersion])
+  // Rest
+  implementation([group: 'io.quarkus', name: 'quarkus-resteasy-mutiny'])
+  implementation([group: 'io.quarkus', name: 'quarkus-rest-client'])
+  // Reactive
+  implementation([group: 'io.quarkus', name: 'quarkus-vertx'])
+  implementation([group: 'io.quarkus', name: 'quarkus-vertx-web'])
+  implementation([group: 'io.smallrye.reactive', name: 'smallrye-mutiny-vertx-web-client'])
+
+  testImplementation([group: 'io.quarkus', name: 'quarkus-junit5'])
+  testImplementation([group: 'io.rest-assured', name: 'rest-assured', version: '4.0.0', changing: false])
+}

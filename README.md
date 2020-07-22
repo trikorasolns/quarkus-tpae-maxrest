@@ -1,37 +1,36 @@
-## Welcome to GitHub Pages
+# Introduction
 
-You can use the [editor on GitHub](https://github.com/trikorasolns/quarkus-tpae-maxrest/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This project is our [reactive rest client](https://quarkus.io/guides/rest-client) implementation for the Tivoli Process Automation Engine (TPAE) `maxrest` API.
+It's a common engine for IBM Maximo Asset Management and IBM Control Desk.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# Build
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```bash
+$ ./gradlew clean  quarkusBuild
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+> NOTE: The [jandex](https://github.com/kordamp/jandex-gradle-plugin) plugin is used to help in the CDI process of this library. 
 
-### Jekyll Themes
+# Run
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/trikorasolns/quarkus-tpae-maxrest/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+To run the application in development mode launch.
 
-### Support or Contact
+```bash
+$ ./gradlew quarkusDev
+```
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+# Test
+
+The test target is the rest client target itself. It's defined in the `application.properties` file. 
+
+```bash
+$ ./gradlew check
+```
+
+# Release
+
+## Maven Local
+
+```bash
+$ ./gradlew quarkusBuild jar publishToMavenLocal
+```

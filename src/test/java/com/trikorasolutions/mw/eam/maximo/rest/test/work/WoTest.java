@@ -30,7 +30,6 @@ public class WoTest {
       put("SITEID", tpaeTestSite);
       put("DESCRIPTION", "quarkus test " + tpaeTestSite);
     }}).await().indefinitely();
-    printWo(woJson);
     JsonObject woAttrs = woJson.getJsonObject("WORKORDER").getJsonObject("Attributes");
     printWo(woAttrs);
     String woNum = woAttrs.getJsonObject("WONUM").getString("content");
@@ -59,7 +58,7 @@ public class WoTest {
     } catch (Exception e) {
       LOGGER.error(" # ERROR: APPR", e);
     }
-    printWo(woJson);
+    printWoChangeStatus(woJson);
     LOGGER.info(" # STATUS: INPRG");
     try {
       woJson = woRestImpl.changeStatus(tpaeTestUsername, tpaeTestPassword, String.valueOf(workorderId), "INPRG", null,
@@ -67,7 +66,7 @@ public class WoTest {
     } catch (Exception e) {
       LOGGER.error(" # ERROR: INPRG", e);
     }
-    printWo(woJson);
+    printWoChangeStatus(woJson);
     LOGGER.warn(" # MATUSETRANS");
     Optional<String> itemNum = ConfigProvider.getConfig().getOptionalValue("tpae.test.itemnum", String.class);
     Optional<String> storeRoom = ConfigProvider.getConfig().getOptionalValue("tpae.test.storeroom", String.class);
@@ -75,13 +74,26 @@ public class WoTest {
     if (itemNum.isPresent() && storeRoom.isPresent() && itemSet.isPresent()) {
       LOGGER.warn("set itemNum: {}", itemNum.get());
       woJson = woRestImpl.reportMaterials(tpaeTestUsername, tpaeTestPassword, String.valueOf(workorderId),
-          itemNum.get(), null, "ISSUE", new BigDecimal(-1), null, woNum, storeRoom.get(), (ConfigProvider.getConfig().getOptionalValue("tpae.test.bin", String.class).isPresent()?ConfigProvider.getConfig().getOptionalValue("tpae.test.bin", String.class).get():null), null, itemSet.get(),
-          null, null).await().indefinitely()  ;
+          itemNum.get(), null, "ISSUE", new BigDecimal(-1), null, woNum, storeRoom.get(),
+          (ConfigProvider.getConfig().getOptionalValue("tpae.test.bin",
+              String.class).isPresent() ? ConfigProvider.getConfig().getOptionalValue("tpae.test.bin",
+              String.class).get() : null), null, itemSet.get(), null, null).await().indefinitely();
       woJson = woRestImpl.reportMaterials(tpaeTestUsername, tpaeTestPassword, String.valueOf(workorderId),
-          itemNum.get(), null, "RETURN", new BigDecimal(1), null, woNum, storeRoom.get(), (ConfigProvider.getConfig().getOptionalValue("tpae.test.bin", String.class).isPresent()?ConfigProvider.getConfig().getOptionalValue("tpae.test.bin", String.class).get():null), null, itemSet.get(),
-          null, null).await().indefinitely();
+          itemNum.get(), null, "RETURN", new BigDecimal(1), null, woNum, storeRoom.get(),
+          (ConfigProvider.getConfig().getOptionalValue("tpae.test.bin",
+              String.class).isPresent() ? ConfigProvider.getConfig().getOptionalValue("tpae.test.bin",
+              String.class).get() : null), null, itemSet.get(), null, null).await().indefinitely();
     }
-    printWo(woJson);
+    LOGGER.info(" MATUSETRANS: {}",
+        woJson.getJsonObject("SyncTKR_MW_WOResponse").getJsonObject("TKR_MW_WOSet").getJsonObject(
+            "WORKORDER").getJsonObject("RelatedMbos").getJsonArray("MATUSETRANS").toString());
+    LOGGER.info(" # WORKLOG");
+    woJson = woRestImpl.addWorkLog(tpaeTestUsername, tpaeTestPassword, String.valueOf(workorderId), "WORK", null,
+        "work log title",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.").await().indefinitely();
+    LOGGER.info(" WORKLOG: {}",
+        woJson.getJsonObject("SyncTKR_MW_WOResponse").getJsonObject("TKR_MW_WOSet").getJsonObject(
+            "WORKORDER").getJsonObject("RelatedMbos").getJsonArray("WORKLOG").toString());
     LOGGER.warn(" # STATUS: COMP");
     try {
       woJson = woRestImpl.changeStatus(tpaeTestUsername, tpaeTestPassword, String.valueOf(workorderId), "COMP", null,
@@ -89,12 +101,12 @@ public class WoTest {
     } catch (Exception e) {
       LOGGER.error(" # ERROR: COMP", e);
     }
-    printWo(woJson);
-    LOGGER.warn(" # STATUS: CLOSE");
+    printWoChangeStatus(woJson);
+    LOGGER.info(" # STATUS: CLOSE");
     try {
       woJson = woRestImpl.changeStatus(tpaeTestUsername, tpaeTestPassword, String.valueOf(workorderId), "CLOSE", null,
           "Quarkus Test").await().indefinitely();
-      printWo(woJson);
+      printWoChangeStatus(woJson);
     } catch (Exception e) {
       LOGGER.error(" # ERROR: CLOSE", e);
     }
@@ -103,12 +115,13 @@ public class WoTest {
     LOGGER.warn("fullWoTest().");
   }
 
-  private void printWoMain(JsonObject thisResult) {
-    LOGGER.warn("#printWo(JsonObject)", thisResult);
-    LOGGER.warn("woTest: {}", thisResult);
+  private void printWoChangeStatus(JsonObject woJson) {
+    JsonObject woAttrs = woJson.getJsonObject("WORKORDER").getJsonObject("Attributes");
+    LOGGER.info("WORKORDER, STATUS, STATUSDATE: {}, {}, {}", woAttrs.getJsonObject("WONUM").getString("content"),
+        woAttrs.getJsonObject("STATUS").getString("content"), woAttrs.getJsonObject("STATUSDATE").getString("content"));
   }
 
   private void printWo(JsonObject objJson) {
-    LOGGER.warn("jsonObj: {}", objJson);
+    LOGGER.info("jsonObj: {}", objJson);
   }
 }

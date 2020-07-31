@@ -105,7 +105,7 @@ public class MaximoRestWorkorderServiceImpl {
       COMMON_LOG.debug("  -> pDstatusDate: " + pDstatusDate);
       COMMON_LOG.debug("  -> psmemo: " + psmemo);
     }
-    return woMboService.changeStatus(userName, userPwd,  "changeStatus", pSrecordId, "this", pSnewStatus,
+    return woMboService.changeStatus(userName, userPwd, "changeStatus", pSrecordId, "this", pSnewStatus,
         (pDstatusDate != null ? sdFormat.format(pDstatusDate) : null), psmemo);
   }
 
@@ -177,8 +177,9 @@ public class MaximoRestWorkorderServiceImpl {
     }
     DecimalFormat formatter = (DecimalFormat) NumberFormat.getInstance();
     return woOsService.addMaterials(userName, userPwd, pSworkorderId, pSitemCode, smaterialDesc, psrotAssetNum,
-        formatter.format(pBdQuantity.doubleValue()), pSissueType, (pdActualDate!=null?sdFormat.format(pdActualDate):null), psworkorderKey,
-        sStoreLocation, sbinNumber, psitemSetId, psactualTaskId);
+        formatter.format(pBdQuantity.doubleValue()), pSissueType,
+        (pdActualDate != null ? sdFormat.format(pdActualDate) : null), psworkorderKey, sStoreLocation, sbinNumber,
+        psitemSetId, psactualTaskId);
   }
 
   public Uni<JsonObject> reportServices(String userName, String userPwd, String pSsite, String pSworkorderId,
@@ -188,7 +189,7 @@ public class MaximoRestWorkorderServiceImpl {
   }
 
   public Uni<JsonObject> reportTools(String userName, String userPwd, String pSworkorderId, String psItemCode,
-      Date pdEnterDate, BigDecimal pBdQuantity, BigDecimal pBdtimeAmount, String psworkorderKey,
+      Date pdEnterDate, BigDecimal pBdQuantity, BigDecimal timeAmount, String psworkorderKey,
       final String pstrRotAssetNum, final String pstrRotAssetSiteId, Map<String, String> pPhmUrlParameters) {
     if (COMMON_LOG.isDebugEnabled()) {
       COMMON_LOG.debug("#reportTools(...)...");
@@ -196,12 +197,12 @@ public class MaximoRestWorkorderServiceImpl {
       COMMON_LOG.debug("  -> psItemCode: " + psItemCode);
       COMMON_LOG.debug("  -> pdEnterDate: " + pdEnterDate);
       COMMON_LOG.debug("  -> pBdQuantity: " + pBdQuantity);
-      COMMON_LOG.debug("  -> pBdtimeAmount: " + pBdtimeAmount);
+      COMMON_LOG.debug("  -> pBdtimeAmount: " + timeAmount);
       COMMON_LOG.debug("  -> pPhmUrlParameters: " + pPhmUrlParameters);
     }
     DecimalFormat formatter = (DecimalFormat) NumberFormat.getInstance(new Locale("ES", "es"));
     return woOsService.addTools(userName, userPwd, pSworkorderId, psItemCode, pstrRotAssetNum, pstrRotAssetSiteId,
-        formatter.format(pBdQuantity.doubleValue()), formatter.format(pBdtimeAmount.doubleValue()), psworkorderKey,
+        formatter.format(pBdQuantity.doubleValue()), formatter.format(timeAmount.doubleValue()), psworkorderKey,
         sdFormat.format(pdEnterDate));
   }
 
@@ -216,7 +217,8 @@ public class MaximoRestWorkorderServiceImpl {
       COMMON_LOG.debug("  -> text: " + text);
     }
     DecimalFormatSymbols symbols = new DecimalFormatSymbols();
-    return woOsService.addWorklog(userName, userPwd, workorderId, logType, sdFormat.format(logDate), description, text);
+    return woOsService.addWorklog(userName, userPwd, workorderId, logType,
+        (logDate != null ? sdFormat.format(logDate) : null), description, text);
   }
 
 

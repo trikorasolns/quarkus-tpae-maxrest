@@ -30,7 +30,6 @@ public class WoTest {
       put("SITEID", tpaeTestSite);
       put("DESCRIPTION", "quarkus test " + tpaeTestSite);
     }}).await().indefinitely();
-    printWo(woJson);
     JsonObject woAttrs = woJson.getJsonObject("WORKORDER").getJsonObject("Attributes");
     printWo(woAttrs);
     String woNum = woAttrs.getJsonObject("WONUM").getString("content");
@@ -88,7 +87,7 @@ public class WoTest {
     LOGGER.info(" MATUSETRANS: {}",
         woJson.getJsonObject("SyncTKR_MW_WOResponse").getJsonObject("TKR_MW_WOSet").getJsonObject(
             "WORKORDER").getJsonObject("RelatedMbos").getJsonArray("MATUSETRANS").toString());
-    LOGGER.warn(" # WORKLOG");
+    LOGGER.info(" # WORKLOG");
     woJson = woRestImpl.addWorkLog(tpaeTestUsername, tpaeTestPassword, String.valueOf(workorderId), "WORK", null,
         "work log title",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.").await().indefinitely();
@@ -103,7 +102,7 @@ public class WoTest {
       LOGGER.error(" # ERROR: COMP", e);
     }
     printWoChangeStatus(woJson);
-    LOGGER.warn(" # STATUS: CLOSE");
+    LOGGER.info(" # STATUS: CLOSE");
     try {
       woJson = woRestImpl.changeStatus(tpaeTestUsername, tpaeTestPassword, String.valueOf(workorderId), "CLOSE", null,
           "Quarkus Test").await().indefinitely();
@@ -123,6 +122,6 @@ public class WoTest {
   }
 
   private void printWo(JsonObject objJson) {
-    LOGGER.warn("jsonObj: {}", objJson);
+    LOGGER.info("jsonObj: {}", objJson);
   }
 }

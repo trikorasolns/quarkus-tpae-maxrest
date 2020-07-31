@@ -14,5 +14,8 @@ public interface MaxRelatedWorklogService {
   @PUT
   @Path("/{id}")
   @Produces("application/json")
-  Uni<JsonObject> addWorklog(@QueryParam("_lid") String uid, @QueryParam("_lpwd") String pwd, @PathParam String id, @QueryParam("worklog.id1.logtype") String logtype, @QueryParam("worklog.id1.createdate") String createdate, @QueryParam("worklog.id1.description") String description, @QueryParam("worklog.id1.DESCRIPTION_LONGDESCRIPTION") String longdescription);
+  Uni<JsonObject> addWorklog(@QueryParam("_lid") String uid, @QueryParam("_lpwd") String pwd, @PathParam String id,
+      @QueryParam("worklog.id1.logtype") String logtype, @QueryParam("worklog.id1.createdate") String createdate,
+      @QueryParam("worklog.id1.description") String description,
+      @QueryParam("worklog.id1.DESCRIPTION_LONGDESCRIPTION") String longdescription);
 }

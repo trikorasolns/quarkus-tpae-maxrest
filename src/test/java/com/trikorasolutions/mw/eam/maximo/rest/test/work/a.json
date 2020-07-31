@@ -1,0 +1,523 @@
+{
+  "SyncTKR_MW_WOResponse": {
+    "rsStart": 0,
+    "rsCount": 1,
+    "rsTotal": 1,
+    "TKR_MW_WOSet": {
+      "WORKORDER": {
+        "rowstamp": "73936274",
+        "Attributes": {
+          "ACTINTLABCOST": {
+            "content": 0.0
+          },
+          "ACTINTLABHRS": {
+            "content": 0.0
+          },
+          "ACTLABCOST": {
+            "content": 0.0
+          },
+          "ACTLABHRS": {
+            "content": 0.0
+          },
+          "ACTMATCOST": {
+            "content": 0.0
+          },
+          "ACTOUTLABCOST": {
+            "content": 0.0
+          },
+          "ACTOUTLABHRS": {
+            "content": 0.0
+          },
+          "ACTSERVCOST": {
+            "content": 0.0
+          },
+          "ACTSTART": {
+            "content": "2020-07-31T19:42:51+02:00"
+          },
+          "ACTTOOLCOST": {
+            "content": 0.0
+          },
+          "AMS": {
+            "content": false
+          },
+          "AOS": {
+            "content": false
+          },
+          "APPTREQUIRED": {
+            "content": false
+          },
+          "AVAILSTATUSDATE": {
+            "content": "2020-07-31T19:42:50+02:00"
+          },
+          "CHANGEBY": {
+            "content": "MXINTADM"
+          },
+          "CHANGEDATE": {
+            "content": "2020-07-31T19:42:53+02:00"
+          },
+          "CHARGESTORE": {
+            "content": false
+          },
+          "CINCLOAUTO": {
+            "content": false
+          },
+          "CINISCP": {
+            "content": false
+          },
+          "CLONED": {
+            "content": false
+          },
+          "DESCRIPTION": {
+            "content": "quarkus test XQ00"
+          },
+          "DIRISSUEMTLSTATUS": {
+            "content": "NONE"
+          },
+          "DISABLED": {
+            "content": false
+          },
+          "DJPAPPLIED": {
+            "content": "NO"
+          },
+          "DOWNTIME": {
+            "content": false
+          },
+          "ESTATAPPRINTLABCOST": {
+            "content": 0.0
+          },
+          "ESTATAPPRINTLABHRS": {
+            "content": 0.0
+          },
+          "ESTATAPPRLABCOST": {
+            "content": 0.0
+          },
+          "ESTATAPPRLABHRS": {
+            "content": 0.0
+          },
+          "ESTATAPPRMATCOST": {
+            "content": 0.0
+          },
+          "ESTATAPPROUTLABCOST": {
+            "content": 0.0
+          },
+          "ESTATAPPROUTLABHRS": {
+            "content": 0.0
+          },
+          "ESTATAPPRSERVCOST": {
+            "content": 0.0
+          },
+          "ESTATAPPRTOOLCOST": {
+            "content": 0.0
+          },
+          "ESTDUR": {
+            "content": 0.0
+          },
+          "ESTINTLABCOST": {
+            "content": 0.0
+          },
+          "ESTINTLABHRS": {
+            "content": 0.0
+          },
+          "ESTLABCOST": {
+            "content": 0.0
+          },
+          "ESTLABHRS": {
+            "content": 0.0
+          },
+          "ESTMATCOST": {
+            "content": 0.0
+          },
+          "ESTOUTLABCOST": {
+            "content": 0.0
+          },
+          "ESTOUTLABHRS": {
+            "content": 0.0
+          },
+          "ESTSERVCOST": {
+            "content": 0.0
+          },
+          "ESTTOOLCOST": {
+            "content": 0.0
+          },
+          "FIRSTAPPRSTATUS": {
+            "content": "WMATL"
+          },
+          "FLOWACTIONASSIST": {
+            "content": false
+          },
+          "FLOWCONTROLLED": {
+            "content": false
+          },
+          "HASCHILDREN": {
+            "content": true
+          },
+          "HASFOLLOWUPWORK": {
+            "content": false
+          },
+          "HISTORYFLAG": {
+            "content": false
+          },
+          "IGNOREDIAVAIL": {
+            "content": false
+          },
+          "IGNORESRMAVAIL": {
+            "content": true
+          },
+          "INCTASKSINSCHED": {
+            "content": true
+          },
+          "INTERRUPTIBLE": {
+            "content": false
+          },
+          "ISTASK": {
+            "content": false
+          },
+          "ISWOCLON": {
+            "content": false
+          },
+          "JPNUM": {
+            "content": "INMED0301"
+          },
+          "LMS": {
+            "content": false
+          },
+          "LOS": {
+            "content": false
+          },
+          "MILESTONE": {
+            "content": false
+          },
+          "NESTEDJPINPROCESS": {
+            "content": false
+          },
+          "NEWCHILDCLASS": {
+            "content": "WORKORDER"
+          },
+          "ORGID": {
+            "content": "XQ"
+          },
+          "OUTLABCOST": {
+            "content": 0.0
+          },
+          "OUTMATCOST": {
+            "content": 0.0
+          },
+          "OUTTOOLCOST": {
+            "content": 0.0
+          },
+          "PARENTCHGSSTATUS": {
+            "content": true
+          },
+          "PLUSCISMOBILE": {
+            "content": false
+          },
+          "PLUSCJPREVNUM": {
+            "content": 0
+          },
+          "PLUSCLOOP": {
+            "content": false
+          },
+          "PLUSSISGIS": {
+            "content": false
+          },
+          "REPAIRLOCFLAG": {
+            "content": false
+          },
+          "REPORTDATE": {
+            "content": "2020-07-31T19:42:43+02:00"
+          },
+          "REPORTEDBY": {
+            "content": "MXINTADM"
+          },
+          "REQASSTDWNTIME": {
+            "content": false
+          },
+          "SITEID": {
+            "content": "XQ00"
+          },
+          "STATUS": {
+            "content": "INPRG"
+          },
+          "STATUSDATE": {
+            "content": "2020-07-31T19:42:51+02:00"
+          },
+          "SUSPENDFLOW": {
+            "content": false
+          },
+          "WOACCEPTSCHARGES": {
+            "content": true
+          },
+          "WOCLASS": {
+            "content": "WORKORDER"
+          },
+          "WOGROUP": {
+            "content": "OT20-46632"
+          },
+          "WOISSWAP": {
+            "content": false
+          },
+          "WONUM": {
+            "content": "OT20-46632"
+          },
+          "WORKORDERID": {
+            "content": 777316,
+            "resourceid": true
+          },
+          "WORKPACKMTLSTATUS": {
+            "content": "NONE"
+          }
+        },
+        "RelatedMbos": {
+          "MATUSETRANS": [
+            {
+              "rowstamp": "73936262",
+              "Attributes": {
+                "ACTUALCOST": {
+                  "content": 0.0
+                },
+                "ACTUALDATE": {
+                  "content": "2020-07-31T19:42:52+02:00"
+                },
+                "CINSAPIFERROR": {
+                  "content": "SAP MM Interface non active for Organization XQ"
+                },
+                "CINSAPIFERRORCODE": {
+                  "content": "XQ"
+                },
+                "CINSAPIFSTATUS": {
+                  "content": "KO"
+                },
+                "CINSAPIFSTATUSDATE": {
+                  "content": "2020-07-31T19:42:57+02:00"
+                },
+                "COMMODITYGROUP": {
+                  "content": "12022"
+                },
+                "CONDRATE": {
+                  "content": 100
+                },
+                "CONSIGNMENT": {
+                  "content": false
+                },
+                "CONVERSION": {
+                  "content": 1.0
+                },
+                "CURBAL": {
+                  "content": 5.0
+                },
+                "CURRENCYCODE": {
+                  "content": "EUR"
+                },
+                "CURRENCYLINECOST": {
+                  "content": 0.0
+                },
+                "CURRENCYUNITCOST": {
+                  "content": 0.0
+                },
+                "DESCRIPTION": {
+                  "content": "Serigrafia de S.M. mecanico Aspa/Flecha"
+                },
+                "ENTERBY": {
+                  "content": "MXINTADM"
+                },
+                "ENTEREDASTASK": {
+                  "content": false
+                },
+                "EXCHANGERATE": {
+                  "content": 1.0
+                },
+                "FINANCIALPERIOD": {
+                  "content": "2020"
+                },
+                "ISSUETYPE": {
+                  "content": "ISSUE"
+                },
+                "ISSUEUNIT": {
+                  "content": "UN"
+                },
+                "ITEMNUM": {
+                  "content": "12000473"
+                },
+                "ITEMSETID": {
+                  "content": "XQISET"
+                },
+                "LINECOST": {
+                  "content": 0.0
+                },
+                "LINETYPE": {
+                  "content": "ITEM"
+                },
+                "MATUSETRANSID": {
+                  "content": 2749558,
+                  "resourceid": true
+                },
+                "ORGID": {
+                  "content": "XQ"
+                },
+                "OUTSIDE": {
+                  "content": false
+                },
+                "PHYSCNT": {
+                  "content": 5.0
+                },
+                "QTYREQUESTED": {
+                  "content": 1.0
+                },
+                "QUANTITY": {
+                  "content": -1.0
+                },
+                "REFWO": {
+                  "content": "OT20-46632"
+                },
+                "ROLLUP": {
+                  "content": false
+                },
+                "SPAREPARTADDED": {
+                  "content": false
+                },
+                "STORELOC": {
+                  "content": "XQ01"
+                },
+                "TOSITEID": {
+                  "content": "XQ00"
+                },
+                "TRANSDATE": {
+                  "content": "2020-07-31T19:42:52+02:00"
+                },
+                "UNITCOST": {
+                  "content": 0.0
+                },
+                "WPITEMID": {
+                  "content": -1
+                }
+              }
+            },
+            {
+              "rowstamp": "73936272",
+              "Attributes": {
+                "ACTUALCOST": {
+                  "content": 0.0
+                },
+                "ACTUALDATE": {
+                  "content": "2020-07-31T19:42:53+02:00"
+                },
+                "CINSAPIFERROR": {
+                  "content": "SAP MM Interface non active for Organization XQ"
+                },
+                "CINSAPIFERRORCODE": {
+                  "content": "XQ"
+                },
+                "CINSAPIFSTATUS": {
+                  "content": "KO"
+                },
+                "CINSAPIFSTATUSDATE": {
+                  "content": "2020-07-31T19:42:57+02:00"
+                },
+                "COMMODITYGROUP": {
+                  "content": "12022"
+                },
+                "CONDRATE": {
+                  "content": 100
+                },
+                "CONSIGNMENT": {
+                  "content": false
+                },
+                "CONVERSION": {
+                  "content": 1.0
+                },
+                "CURBAL": {
+                  "content": 4.0
+                },
+                "CURRENCYCODE": {
+                  "content": "EUR"
+                },
+                "CURRENCYLINECOST": {
+                  "content": 0.0
+                },
+                "CURRENCYUNITCOST": {
+                  "content": 0.0
+                },
+                "DESCRIPTION": {
+                  "content": "Serigrafia de S.M. mecanico Aspa/Flecha"
+                },
+                "ENTERBY": {
+                  "content": "MXINTADM"
+                },
+                "ENTEREDASTASK": {
+                  "content": false
+                },
+                "EXCHANGERATE": {
+                  "content": 1.0
+                },
+                "FINANCIALPERIOD": {
+                  "content": "2020"
+                },
+                "ISSUETYPE": {
+                  "content": "RETURN"
+                },
+                "ISSUEUNIT": {
+                  "content": "UN"
+                },
+                "ITEMNUM": {
+                  "content": "12000473"
+                },
+                "ITEMSETID": {
+                  "content": "XQISET"
+                },
+                "LINECOST": {
+                  "content": 0.0
+                },
+                "LINETYPE": {
+                  "content": "ITEM"
+                },
+                "MATUSETRANSID": {
+                  "content": 2749559,
+                  "resourceid": true
+                },
+                "ORGID": {
+                  "content": "XQ"
+                },
+                "OUTSIDE": {
+                  "content": false
+                },
+                "PHYSCNT": {
+                  "content": 5.0
+                },
+                "QTYREQUESTED": {
+                  "content": 1.0
+                },
+                "QUANTITY": {
+                  "content": 1.0
+                },
+                "REFWO": {
+                  "content": "OT20-46632"
+                },
+                "ROLLUP": {
+                  "content": false
+                },
+                "SPAREPARTADDED": {
+                  "content": false
+                },
+                "STORELOC": {
+                  "content": "XQ01"
+                },
+                "TOSITEID": {
+                  "content": "XQ00"
+                },
+                "TRANSDATE": {
+                  "content": "2020-07-31T19:42:53+02:00"
+                },
+                "UNITCOST": {
+                  "content": 0.0
+                },
+                "WPITEMID": {
+                  "content": -1
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+},

@@ -20,25 +20,60 @@ public class WoTest {
   MaximoRestWorkorderServiceImpl woRestImpl;
 
   @Test
+  public void add() {
+    final String tpaeTestUsername = ConfigProvider.getConfig().getValue("tpae.username", String.class);
+    final String tpaeTestPassword = ConfigProvider.getConfig().getValue("tpae.password", String.class);
+    final String tpaeTestSite = ConfigProvider.getConfig().getValue("tpae.siteid", String.class);
+    JsonObject wo = woRestImpl.add(tpaeTestUsername, tpaeTestPassword, new HashMap<String, String>() {{
+      put("SITEID", tpaeTestSite);
+      put("DESCRIPTION", "test " + tpaeTestSite);
+    }}).await().indefinitely();
+    LOGGER.warn("item: {}", wo);
+
+  }
+
+  @Test
   public void query() {
     final String tpaeTestUsername = ConfigProvider.getConfig().getValue("tpae.username", String.class);
     final String tpaeTestPassword = ConfigProvider.getConfig().getValue("tpae.password", String.class);
     final String tpaeTestSite = ConfigProvider.getConfig().getValue("tpae.siteid", String.class);
-    Uni<Object> s = woRestImpl.query(tpaeTestUsername, tpaeTestPassword, new HashMap<String, String>() {{
+    woRestImpl.querySync(tpaeTestUsername, tpaeTestPassword, new HashMap<String, String>() {{
       put("_INCLUDECOLS", "WORKORDERID,WONUM,SITEID");
       put("SITEID", tpaeTestSite);
-    }}).collectItems().asList().onItem().apply(t -> {
-      {
-        t.stream().forEach(u -> {
+      put("WONUM", "1000");
+    }}).stream().peek(peeked -> {
           {
-            printWo(u);
+        LOGGER.warn("item: {}", peeked);
           }
-        });
-        return t;
+    }).forEach(result -> {
+      {
+        LOGGER.warn("result: {}", result);
       }
     });
-    LOGGER.warn("asynchronus print {}", s);
     LOGGER.warn("...#query.");
+  }
+
+  @Test
+  public void queryAsync() {
+    final String tpaeTestUsername = ConfigProvider.getConfig().getValue("tpae.username", String.class);
+    final String tpaeTestPassword = ConfigProvider.getConfig().getValue("tpae.password", String.class);
+    final String tpaeTestSite = ConfigProvider.getConfig().getValue("tpae.siteid", String.class);
+    JsonObject tpaeWo = woRestImpl.query(tpaeTestUsername, tpaeTestPassword, new HashMap<String, String>() {{
+      put("_INCLUDECOLS", "WORKORDERID,WONUM,SITEID,CHANGEDATE");
+      put("SITEID", tpaeTestSite);
+      put("WONUM", "1000");
+    }}).await().indefinitely();
+    LOGGER.warn("queryAsync result: {}", tpaeWo);
+    tpaeWo.stream().peek(peeked -> {
+      {
+        LOGGER.warn("item: {}", peeked);
+      }
+    }).forEach(result -> {
+      {
+        LOGGER.warn("result: {}", result);
+      }
+    });
+    LOGGER.warn("...#queryAsync.");
   }
 
   private void printWo(JsonObject thisResult) {

@@ -42,7 +42,12 @@ public interface MaxMboWoService {
   @GET
   @Path("/")
   @Produces("application/json")
-  Multi<JsonObject> query(@QueryParam("_lid") String uid, @QueryParam("_lpwd") String pwd, Map<String, String> multiValueMap);
+  JsonObject querySync(@QueryParam("_lid") String uid, @QueryParam("_lpwd") String pwd, Map<String, String> multiValueMap);
+
+  @GET
+  @Path("/")
+  @Produces("application/json")
+  Uni<JsonObject> query(@QueryParam("_lid") String uid, @QueryParam("_lpwd") String pwd, Map<String, String> multiValueMap);
 
   @POST
   @Path("/{id}")

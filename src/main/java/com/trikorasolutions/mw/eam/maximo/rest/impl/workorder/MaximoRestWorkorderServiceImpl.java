@@ -5,7 +5,6 @@ package com.trikorasolutions.mw.eam.maximo.rest.impl.workorder;
 
 import com.trikorasolutions.mw.eam.maximo.rest.service.mbo.workorder.MaxMboWoService;
 import com.trikorasolutions.mw.eam.maximo.rest.service.mbo.workorder.MaxOsWoService;
-import io.smallrye.mutiny.Multi;
 import io.smallrye.mutiny.Uni;
 import io.vertx.core.json.JsonObject;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
@@ -58,7 +57,8 @@ public class MaximoRestWorkorderServiceImpl {
   public MaximoRestWorkorderServiceImpl() {
   }
 
-  public Uni<JsonObject> getByPKey(String userName, String userPwd, String psrecordId, Map<String, String> phmUrlParameters) {
+  public Uni<JsonObject> getByPKey(String userName, String userPwd, String psrecordId,
+      Map<String, String> phmUrlParameters) {
     if (COMMON_LOG.isDebugEnabled()) {
       COMMON_LOG.debug("#getByPKey(String,String,String)...");
       COMMON_LOG.debug("psrecordId: " + psrecordId);
@@ -66,12 +66,8 @@ public class MaximoRestWorkorderServiceImpl {
     return woMboService.getById(userName, userPwd, psrecordId, phmUrlParameters);
   }
 
-  /*
-   * (non-Javadoc)
-   * @see com.trikorasolutions.mw.eam.core.service.SiteService#getByKeys(com.trikorasolutions.mw.eam.core.String,String,
-   * java.lang.String, java.lang.String)
-   */
-  public Uni<JsonObject> getByKeys(String userName, String userPwd, String psSiteId, String psRecurdNum, Map<String, String> phmUrlParameters) {
+  public Uni<JsonObject> getByKeys(String userName, String userPwd, String psSiteId, String psRecurdNum,
+      Map<String, String> phmUrlParameters) {
     if (COMMON_LOG.isDebugEnabled()) {
       COMMON_LOG.debug("#getByKeys(String,String,String)...");
       COMMON_LOG.debug("wonum: " + psRecurdNum);
@@ -80,7 +76,17 @@ public class MaximoRestWorkorderServiceImpl {
     return woMboService.getByNum(userName, userPwd, psRecurdNum, psSiteId, phmUrlParameters);
   }
 
-  public Multi<JsonObject> query(String userName, String userPwd, HashMap<String, String> phmUrlParameters) {
+  public JsonObject querySync(String userName, String userPwd, HashMap<String, String> phmUrlParameters) {
+    if (COMMON_LOG.isDebugEnabled()) {
+      COMMON_LOG.debug("#querySync(String,String,HashMap)...");
+      COMMON_LOG.debug("  -> userName: {}", userName);
+      COMMON_LOG.debug("  -> phmUrlParameters: {}", phmUrlParameters);
+      COMMON_LOG.debug("  -> woMboService: {}", woMboService);
+    }
+    return woMboService.querySync(userName, userPwd, phmUrlParameters);
+  }
+
+  public Uni<JsonObject> query(String userName, String userPwd, HashMap<String, String> phmUrlParameters) {
     if (COMMON_LOG.isDebugEnabled()) {
       COMMON_LOG.debug("#query(String,String,HashMap)...");
       COMMON_LOG.debug("  -> userName: {}", userName);
@@ -90,7 +96,8 @@ public class MaximoRestWorkorderServiceImpl {
     return woMboService.query(userName, userPwd, phmUrlParameters);
   }
 
-  public Uni<JsonObject> changeStatus(String userName, String userPwd, String pSrecordId, String pSnewStatus, Date pDstatusDate, String psmemo) {
+  public Uni<JsonObject> changeStatus(String userName, String userPwd, String pSrecordId, String pSnewStatus,
+      Date pDstatusDate, String psmemo) {
     if (COMMON_LOG.isDebugEnabled()) {
       COMMON_LOG.debug("#changeStatus(...)...");
       COMMON_LOG.debug("  -> pSrecordId: " + pSrecordId);
@@ -116,7 +123,8 @@ public class MaximoRestWorkorderServiceImpl {
     return retVal;
   }
 
-  public Uni<JsonObject> modify(String userName, String userPwd, String pSrecordId, Map<String, String> pHmUrlParameters) {
+  public Uni<JsonObject> modify(String userName, String userPwd, String pSrecordId,
+      Map<String, String> pHmUrlParameters) {
     if (COMMON_LOG.isDebugEnabled()) {
       COMMON_LOG.debug("#modify(String,String,String,HashMap)...");
       COMMON_LOG.debug("  -> pSrecordId: " + pSrecordId);
@@ -125,11 +133,13 @@ public class MaximoRestWorkorderServiceImpl {
     return woMboService.modify(userName, userPwd, pSrecordId, pHmUrlParameters);
   }
 
-  public Uni<JsonObject> getFull(String userName, String userPwd, String recordId, Map<String, String> hmUrlParameters) {
+  public Uni<JsonObject> getFull(String userName, String userPwd, String recordId,
+      Map<String, String> hmUrlParameters) {
     return woMboService.getById(userName, userPwd, recordId, hmUrlParameters);
   }
 
-  public Uni<JsonObject> addDocument(String userName, String userPwd, String pSrecordId, String pSdocType, String pSurlType, String psdescription, String psfileName, String... pSdocumentData) {
+  public Uni<JsonObject> addDocument(String userName, String userPwd, String pSrecordId, String pSdocType,
+      String pSurlType, String psdescription, String psfileName, String... pSdocumentData) {
     if (COMMON_LOG.isDebugEnabled()) {
       COMMON_LOG.debug("#addDocument(...)...");
       COMMON_LOG.debug("  -> pSrecordId: " + pSrecordId);
@@ -147,7 +157,10 @@ public class MaximoRestWorkorderServiceImpl {
         psdescription, psfileName, psfileName, psfileName, psfileName, sbDocumentData.toString());
   }
 
-  public Uni<JsonObject> reportMaterials(String userName, String userPwd, String pSworkorderId, String pSitemCode, String smaterialDesc, String pSissueType, BigDecimal pBdQuantity, Date pdActualDate, String psworkorderKey, String sStoreLocation, String sbinNumber, String psrotAssetNum, String psitemSetId, String psactualTaskId, Map<String, String> pPhmUrlParameters) {
+  public Uni<JsonObject> reportMaterials(String userName, String userPwd, String pSworkorderId, String pSitemCode,
+      String smaterialDesc, String pSissueType, BigDecimal pBdQuantity, Date pdActualDate, String psworkorderKey,
+      String sStoreLocation, String sbinNumber, String psrotAssetNum, String psitemSetId, String psactualTaskId,
+      Map<String, String> pPhmUrlParameters) {
     if (COMMON_LOG.isDebugEnabled()) {
       COMMON_LOG.debug("#reportMaterials(...)...");
       COMMON_LOG.debug("  -> pSworkorderId: " + pSworkorderId);
@@ -168,12 +181,15 @@ public class MaximoRestWorkorderServiceImpl {
         sStoreLocation, sbinNumber, psitemSetId, psactualTaskId);
   }
 
-  public Uni<JsonObject> reportServices(String userName, String userPwd, String pSsite, String pSworkorderId, String pSissueType, BigDecimal pBdQuantity, String psworkorderKey, Map<String, String> pPhmUrlParameters) {
+  public Uni<JsonObject> reportServices(String userName, String userPwd, String pSsite, String pSworkorderId,
+      String pSissueType, BigDecimal pBdQuantity, String psworkorderKey, Map<String, String> pPhmUrlParameters) {
     // TODO Auto-generated method stub
     return null;
   }
 
-  public Uni<JsonObject> reportTools(String userName, String userPwd, String pSworkorderId, String psItemCode, Date pdEnterDate, BigDecimal pBdQuantity, BigDecimal pBdtimeAmount, String psworkorderKey, final String pstrRotAssetNum, final String pstrRotAssetSiteId, Map<String, String> pPhmUrlParameters) {
+  public Uni<JsonObject> reportTools(String userName, String userPwd, String pSworkorderId, String psItemCode,
+      Date pdEnterDate, BigDecimal pBdQuantity, BigDecimal pBdtimeAmount, String psworkorderKey,
+      final String pstrRotAssetNum, final String pstrRotAssetSiteId, Map<String, String> pPhmUrlParameters) {
     if (COMMON_LOG.isDebugEnabled()) {
       COMMON_LOG.debug("#reportTools(...)...");
       COMMON_LOG.debug("  -> pSworkorderId: " + pSworkorderId);
@@ -189,7 +205,8 @@ public class MaximoRestWorkorderServiceImpl {
         sdFormat.format(pdEnterDate));
   }
 
-  public Uni<JsonObject> addWorkLog(String userName, String userPwd, String workorderId, String logType, Date logDate, String description, String text) {
+  public Uni<JsonObject> addWorkLog(String userName, String userPwd, String workorderId, String logType, Date logDate,
+      String description, String text) {
     if (COMMON_LOG.isDebugEnabled()) {
       COMMON_LOG.debug("#addWorkLog(...)...");
       COMMON_LOG.debug("  -> workorderId: " + workorderId);

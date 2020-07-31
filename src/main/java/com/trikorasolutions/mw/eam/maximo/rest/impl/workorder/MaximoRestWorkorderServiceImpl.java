@@ -105,8 +105,8 @@ public class MaximoRestWorkorderServiceImpl {
       COMMON_LOG.debug("  -> pDstatusDate: " + pDstatusDate);
       COMMON_LOG.debug("  -> psmemo: " + psmemo);
     }
-    return woMboService.changeStatus(userName, userPwd, "changeStatus", pSrecordId, "this", pSnewStatus,
-        sdFormat.format(pDstatusDate), psmemo);
+    return woMboService.changeStatus(userName, userPwd,  "changeStatus", pSrecordId, "this", pSnewStatus,
+        (pDstatusDate != null ? sdFormat.format(pDstatusDate) : null), psmemo);
   }
 
   public Uni<JsonObject> add(String userName, String userPwd, HashMap<String, String> pHmUrlParameters) {
@@ -177,7 +177,7 @@ public class MaximoRestWorkorderServiceImpl {
     }
     DecimalFormat formatter = (DecimalFormat) NumberFormat.getInstance();
     return woOsService.addMaterials(userName, userPwd, pSworkorderId, pSitemCode, smaterialDesc, psrotAssetNum,
-        formatter.format(pBdQuantity.doubleValue()), pSissueType, sdFormat.format(pdActualDate), psworkorderKey,
+        formatter.format(pBdQuantity.doubleValue()), pSissueType, (pdActualDate!=null?sdFormat.format(pdActualDate):null), psworkorderKey,
         sStoreLocation, sbinNumber, psitemSetId, psactualTaskId);
   }
 

@@ -5,6 +5,7 @@ plugins {
   id 'io.quarkus'
   id 'org.kordamp.gradle.jandex'
   id 'net.researchgate.release'
+  id 'maven-publish'
 }
 
 group 'com.trikorasolutions.quarkus.tpae.rest'
@@ -26,7 +27,7 @@ release {
   newVersionCommitMessage = '[Gradle Release Plugin] - new version commit: '
   tagTemplate = '${version}'
   versionPropertyFile = 'version.properties'
-  versionProperties = []
+  versionProperties = ['version']
   snapshotSuffix = '-SNAPSHOT'
   buildTasks = ['build']
   ignoredSnapshotDependencies = []
@@ -47,8 +48,47 @@ release {
   }
 }
 
+publishing {
+  publications {
+    maven(MavenPublication) {
+      artifactId "${project.name}"
+      groupId "${group}"
+      version "${version}"
 
-
+      from components.java
+      pom {
+        licenses {
+          license {
+            name = 'The Apache License, Version 2.0'
+            url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+          }
+        }
+//    developers {
+//      developer {
+//        id = 'johnd'
+//        name = 'John Doe'
+//        email = 'john.doe@example.com'
+//      }
+//    }
+//    scm {
+//      connection = 'scm:git:git://example.com/my-library.git'
+//      developerConnection = 'scm:git:ssh://example.com/my-library.git'
+//      url = 'http://example.com/my-library/'
+//    }
+      }
+    }
+  }
+  repositories {
+    maven {
+      // change URLs to point to your repos, e.g. http://my.org/repo
+      def releasesRepoUrl = "http://ghcr.io/trikorasolns/quarkus-tpae-maxrest"
+//      def snapshotsRepoUrl = "$buildDir/repos/snapshots"
+//      url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+      url = releasesRepoUrl
+    }
+  }
+}
+// Tasks
 def getTimestamp() {
   return new Date().format('yyyyMMddHHmmss')
 }
@@ -59,7 +99,7 @@ configure(rootProject) {
     props.load(it)
     project.ext.propVer = props
   }
-//  ext.myVersion = ext.propVer.get('version') - 'SNAPSHOT'
+  version = ext.propVer.get('version')
 //
 //  if (System.hasProperty('buildVersion')) {
 //    version = myVersion + System.getProperty('buildVersion')
@@ -124,24 +164,13 @@ sourceSets {
   }
 }
 
-publishing {
-  publications {
-    maven(MavenPublication) {
-      from components.java
-      artifactId "${project.name}"
-      groupId "${group}"
-      version "${version}"
-    }
-  }
-}
-
 // Resources filter.
 processResources {
   Properties gradleProps = new Properties()
   gradleProps.load(new FileInputStream(rootDir.toString() + '/gradle.properties'))
   filter(org.apache.tools.ant.filters.ReplaceTokens, tokens: gradleProps)
   filter(org.apache.tools.ant.filters.ReplaceTokens, tokens: [
-      artifactId: project.name
+    artifactId: project.name
   ])
 }
 
@@ -163,3 +192,5 @@ dependencies {
   testImplementation([group: 'io.quarkus', name: 'quarkus-junit5'])
   testImplementation([group: 'io.rest-assured', name: 'rest-assured', version: '4.0.0', changing: false])
 }
+
+afterReleaseBuild.dependsOn publishMavenPublicationToMavenRepository

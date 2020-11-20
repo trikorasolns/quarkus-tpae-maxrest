@@ -1,8 +1,3 @@
----
-title: Quarkus TPAE Rest client
-subtitle: For the maxrest API
----
-
 # Introduction
 
 This project is our [reactive rest client](https://quarkus.io/guides/rest-client) implementation for the Tivoli Process Automation Engine (TPAE) `maxrest` API.
@@ -42,55 +37,22 @@ $ ./gradlew check
 
 # Release
 
-The release of this project is performed by using the [`net.researchgate.release` Gradle plugin](https://plugins.gradle.org/plugin/net.researchgate.release),
- by launching the following instruction.
+## Gradle Release
 
 ```bash
-$ ./gradlew release -PGitHubUsername=<github_user> -PGitHubPassword=<github_token>
+$ ./gradlew release
 ```
 
-It already includes the artifact publication
-
-# Publish package to GitHub
-
-To manually publish the artifacts to GitHub launch the following instruction.
+## Publish package to GitHub
 
 ```bash
 $ ./gradlew publish -PGitHubUsername=<github_user> -PGitHubPassword=<github_token>
 ```
 
-# How to use this project
-
-This project can be used as a library, by adding it to the project dependency. Since it is being published in GitHub,
-GitHub itself must be added as a Maven Repository.
-
-## Dependencies
-
-### Gradle
-
-Add GitHub as a maven repository
-
-```groovy
-repositories {
-  maven {
-    name "GitHub"
-    url "https://maven.pkg.github.com/trikorasolns/quarkus-tpae-maxrest"
-  }
-}
-```
-
-Add the dependency
-
-```groovy
-dependencies {
-  implementation([group: 'com.trikorasolutions.quarkus.tpae.rest', name: 'quarkus-tpae-maxrest', version: tkrQuarkusTpaeVersion, changing: true])
-}
-```
-
-### Maven
+## Maven Local
 
 TBD
 
-## Development
-
-TBD
+```bash
+$ ./gradlew quarkusBuild jar publishToMavenLocal
+```

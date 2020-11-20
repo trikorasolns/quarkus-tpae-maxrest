@@ -14,10 +14,10 @@ defaultTasks 'quarkusBuild', 'check'
 
 // Plugins
 release {
-  failOnCommitNeeded = true
+  failOnCommitNeeded = false
   failOnPublishNeeded = true
   failOnSnapshotDependencies = true
-  failOnUnversionedFiles = true
+  failOnUnversionedFiles = false
   failOnUpdateNeeded = true
   revertOnFail = true
   preCommitText = ''
@@ -59,18 +59,18 @@ configure(rootProject) {
     props.load(it)
     project.ext.propVer = props
   }
-  ext.myVersion = ext.propVer.get('myVersion') - 'SNAPSHOT'
-
-  if (System.hasProperty('buildVersion')) {
-    version = myVersion + System.getProperty('buildVersion')
-  } else if (System.getenv().containsKey('buildVersion')) {
-    version = myVersion + System.getenv('buildVersion')
-  } else if (project.hasProperty('buildVersion')) {
-    version = myVersion + buildVersion
-  } else {
-    def timestamp = getTimestamp()
-    version = myVersion + 'SNAPSHOT-' + timestamp
-  }
+//  ext.myVersion = ext.propVer.get('version') - 'SNAPSHOT'
+//
+//  if (System.hasProperty('buildVersion')) {
+//    version = myVersion + System.getProperty('buildVersion')
+//  } else if (System.getenv().containsKey('buildVersion')) {
+//    version = myVersion + System.getenv('buildVersion')
+//  } else if (project.hasProperty('buildVersion')) {
+//    version = myVersion + buildVersion
+//  } else {
+//    def timestamp = getTimestamp()
+//    version = myVersion + 'SNAPSHOT-' + timestamp
+//  }
   println "version: ${version}"
 }
 

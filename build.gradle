@@ -59,7 +59,7 @@ configure(rootProject) {
     props.load(it)
     project.ext.propVer = props
   }
-  ext.myVersion = ext.propVer.get('myVersion') - 'SNAPSHOT'
+  ext.myVersion = ext.propVer.get('version') - 'SNAPSHOT'
 
   if (System.hasProperty('buildVersion')) {
     version = myVersion + System.getProperty('buildVersion')

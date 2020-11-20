@@ -54,11 +54,11 @@ def getTimestamp() {
 }
 
 configure(rootProject) {
-  file("$rootDir/version.properties").withReader {
-    Properties props = new Properties()
-    props.load(it)
-    project.ext.propVer = props
-  }
+//  file("$rootDir/version.properties").withReader {
+//    Properties props = new Properties()
+//    props.load(it)
+//    project.ext.propVer = props
+//  }
 //  ext.myVersion = ext.propVer.get('version') - 'SNAPSHOT'
 //
 //  if (System.hasProperty('buildVersion')) {

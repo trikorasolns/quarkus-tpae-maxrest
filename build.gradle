@@ -5,50 +5,12 @@ plugins {
   id 'io.quarkus'
   id 'org.kordamp.gradle.jandex'
   id 'net.researchgate.release'
-  id 'maven-publish'
 }
 
 group 'com.trikorasolutions.quarkus.tpae.rest'
 description 'Trikora Solutions :: Middleware :: IBM Maximo Rest'
 
 defaultTasks 'quarkusBuild', 'check'
-
-// Tasks
-def getTimestamp() {
-  return new Date().format('yyyyMMddHHmmss')
-}
-
-configure(rootProject) {
-  file("$rootDir/version.properties").withReader {
-    Properties props = new Properties()
-    props.load(it)
-    project.ext.propVer = props
-  }
-  version = ext.propVer.get('version')
-
-  if (System.hasProperty('publishUser')) {
-    ext.publishUser = System.getProperty('publishUser')
-  } else {
-    ext.publishUser = ''
-  }
-  if (System.hasProperty('publishPassword')) {
-    ext.publishPassword = System.getProperty('publishPassword')
-  } else {
-    ext.publishPassword = ''
-  }
-//
-//  if (System.hasProperty('buildVersion')) {
-//    version = myVersion + System.getProperty('buildVersion')
-//  } else if (System.getenv().containsKey('buildVersion')) {
-//    version = myVersion + System.getenv('buildVersion')
-//  } else if (project.hasProperty('buildVersion')) {
-//    version = myVersion + buildVersion
-//  } else {
-//    def timestamp = getTimestamp()
-//    version = myVersion + 'SNAPSHOT-' + timestamp
-//  }
-  println "version: ${version}"
-}
 
 // Plugins
 release {
@@ -64,9 +26,9 @@ release {
   newVersionCommitMessage = '[Gradle Release Plugin] - new version commit: '
   tagTemplate = '${version}'
   versionPropertyFile = 'version.properties'
-  versionProperties = ['version']
+  versionProperties = []
   snapshotSuffix = '-SNAPSHOT'
-  buildTasks = ['quarkusBuild']
+  buildTasks = ['build']
   ignoredSnapshotDependencies = []
   versionPatterns = [
     /(\d+)([^\d]*$)/: { Matcher m, Project p -> m.replaceAll("${(m[0][1] as int) + 1}${m[0][2]}") }
@@ -85,60 +47,31 @@ release {
   }
 }
 
-publishing {
-  publications {
-    maven(MavenPublication) {
-      artifactId "${project.name}"
-      groupId "${group}"
-      version "${version}"
 
-      from components.java
-      pom {
-        licenses {
-          license {
-            name = 'The Apache License, Version 2.0'
-            url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-          }
-        }
-        organization {
-          name = 'Trikora Solutions'
-          url = 'https://github.com/trikorasolns'
-        }
-        developers {
-          developer {
-            id = 'jacobdotcosta'
-            name = 'A.C.'
-//            email = 'github@larsgrefer.de'
-//            timezone = 'Europe/Berlin'
-          }
-        }
-        issueManagement {
-          system = 'Github'
-          url = 'https://github.com/trikorasolns/quarkus-tpae-maxrest/issues'
-        }
-        scm {
-          connection = 'scm:git:https://github.com/trikorasolns/quarkus-tpae-maxrest.git'
-          developerConnection = 'scm:git:git@github.com:trikorasolns/quarkus-tpae-maxrest.git'
-          url = 'https://github.com/trikorasolns/quarkus-tpae-maxrest'
-        }
-      }
-    }
+
+def getTimestamp() {
+  return new Date().format('yyyyMMddHHmmss')
+}
+
+configure(rootProject) {
+  file("$rootDir/version.properties").withReader {
+    Properties props = new Properties()
+    props.load(it)
+    project.ext.propVer = props
   }
-  repositories {
-    maven {
-      name = 'GitHub'
-      // change URLs to point to your repos, e.g. http://my.org/repo
-      def releasesRepoUrl = "https://maven.pkg.github.com/trikorasolns/quarkus-tpae-maxrest"
-//      def snapshotsRepoUrl = "$buildDir/repos/snapshots"
-//      url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
-      url = releasesRepoUrl
-      authentication {
-        basic(BasicAuthentication)
-        digest(DigestAuthentication)
-      }
-      credentials(PasswordCredentials)
-    }
-  }
+//  ext.myVersion = ext.propVer.get('version') - 'SNAPSHOT'
+//
+//  if (System.hasProperty('buildVersion')) {
+//    version = myVersion + System.getProperty('buildVersion')
+//  } else if (System.getenv().containsKey('buildVersion')) {
+//    version = myVersion + System.getenv('buildVersion')
+//  } else if (project.hasProperty('buildVersion')) {
+//    version = myVersion + buildVersion
+//  } else {
+//    def timestamp = getTimestamp()
+//    version = myVersion + 'SNAPSHOT-' + timestamp
+//  }
+  println "version: ${version}"
 }
 
 
@@ -191,13 +124,24 @@ sourceSets {
   }
 }
 
+publishing {
+  publications {
+    maven(MavenPublication) {
+      from components.java
+      artifactId "${project.name}"
+      groupId "${group}"
+      version "${version}"
+    }
+  }
+}
+
 // Resources filter.
 processResources {
   Properties gradleProps = new Properties()
   gradleProps.load(new FileInputStream(rootDir.toString() + '/gradle.properties'))
   filter(org.apache.tools.ant.filters.ReplaceTokens, tokens: gradleProps)
   filter(org.apache.tools.ant.filters.ReplaceTokens, tokens: [
-    artifactId: project.name
+      artifactId: project.name
   ])
 }
 
@@ -219,6 +163,3 @@ dependencies {
   testImplementation([group: 'io.quarkus', name: 'quarkus-junit5'])
   testImplementation([group: 'io.rest-assured', name: 'rest-assured', version: '4.0.0', changing: false])
 }
-
-// release
-afterReleaseBuild.dependsOn publish

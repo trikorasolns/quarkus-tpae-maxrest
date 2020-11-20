@@ -21,7 +21,7 @@ public class WoTest {
   @Inject
   MaximoRestWorkorderServiceImpl woRestImpl;
 
-  @Test
+//  @Test
   public void fullWoTest() {
     final String tpaeTestUsername = ConfigProvider.getConfig().getValue("tpae.username", String.class);
     final String tpaeTestPassword = ConfigProvider.getConfig().getValue("tpae.password", String.class);

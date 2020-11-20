@@ -39,7 +39,15 @@ $ ./gradlew check
 
 ## Gradle Release
 
-https://github.com/researchgate/gradle-release
+```bash
+$ ./gradlew release
+```
+
+## Publish package to GitHub
+
+```bash
+$ ./gradlew publish -PGitHubUsername=<github_user> -PGitHubPassword=<github_token>
+```
 
 ## Maven Local
 

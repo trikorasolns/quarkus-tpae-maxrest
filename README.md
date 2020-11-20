@@ -3,6 +3,14 @@
 This project is our [reactive rest client](https://quarkus.io/guides/rest-client) implementation for the Tivoli Process Automation Engine (TPAE) `maxrest` API.
 It's a common engine for IBM Maximo Asset Management and IBM Control Desk.
 
+# Configure dependency
+
+## Gradle
+
+```groovy
+maven("https://raw.githubusercontent.com/trikorasolns/quarkus-tpae-maxrest/BRANCH/releases")
+```
+
 # Build
 
 ```bash

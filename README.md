@@ -9,7 +9,7 @@ It's a common engine for IBM Maximo Asset Management and IBM Control Desk.
 $ ./gradlew clean  quarkusBuild
 ```
 
-> NOTE: The [jandex](https://github.com/kordamp/jandex-gradle-plugin) plugin is used to help in the CDI process of this library. 
+> NOTE: The [jandex](https://github.com/kordamp/jandex-gradle-plugin) plugin is used to help in the CDI process of this library.
 
 # Run
 
@@ -21,7 +21,7 @@ $ ./gradlew quarkusDev
 
 # Test
 
-The test target is the rest client target itself. It's defined in the `application.properties` file. 
+The test target is the rest client target itself. It's defined in the `application.properties` file.
 
 ```bash
 $ ./gradlew check
@@ -29,7 +29,13 @@ $ ./gradlew check
 
 # Release
 
+## Gradle Release
+
+https://github.com/researchgate/gradle-release
+
 ## Maven Local
+
+TBD
 
 ```bash
 $ ./gradlew quarkusBuild jar publishToMavenLocal

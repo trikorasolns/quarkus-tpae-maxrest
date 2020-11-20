@@ -193,4 +193,5 @@ dependencies {
   testImplementation([group: 'io.rest-assured', name: 'rest-assured', version: '4.0.0', changing: false])
 }
 
+// release
 afterReleaseBuild.dependsOn publishMavenPublicationToMavenRepository

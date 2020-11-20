@@ -52,10 +52,10 @@ configure(rootProject) {
 
 // Plugins
 release {
-  failOnCommitNeeded = false
+  failOnCommitNeeded = true
   failOnPublishNeeded = true
   failOnSnapshotDependencies = true
-  failOnUnversionedFiles = false
+  failOnUnversionedFiles = true
   failOnUpdateNeeded = true
   revertOnFail = true
   preCommitText = ''

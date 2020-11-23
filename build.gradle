@@ -45,7 +45,7 @@ release {
   versionPropertyFile = 'version.properties'
   versionProperties = ['version']
   snapshotSuffix = '-SNAPSHOT'
-  buildTasks = ['build']
+  buildTasks = ['quarkusBuild']
   ignoredSnapshotDependencies = []
   versionPatterns = [
     /(\d+)([^\d]*$)/: { Matcher m, Project p -> m.replaceAll("${(m[0][1] as int) + 1}${m[0][2]}") }

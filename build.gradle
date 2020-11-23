@@ -26,27 +26,6 @@ configure(rootProject) {
   }
   version = ext.propVer.get('version')
 
-  if (System.hasProperty('publishUser')) {
-    ext.publishUser = System.getProperty('publishUser')
-  } else {
-    ext.publishUser = ''
-  }
-  if (System.hasProperty('publishPassword')) {
-    ext.publishPassword = System.getProperty('publishPassword')
-  } else {
-    ext.publishPassword = ''
-  }
-//
-//  if (System.hasProperty('buildVersion')) {
-//    version = myVersion + System.getProperty('buildVersion')
-//  } else if (System.getenv().containsKey('buildVersion')) {
-//    version = myVersion + System.getenv('buildVersion')
-//  } else if (project.hasProperty('buildVersion')) {
-//    version = myVersion + buildVersion
-//  } else {
-//    def timestamp = getTimestamp()
-//    version = myVersion + 'SNAPSHOT-' + timestamp
-//  }
   println "version: ${version}"
 }
 
@@ -66,7 +45,7 @@ release {
   versionPropertyFile = 'version.properties'
   versionProperties = ['version']
   snapshotSuffix = '-SNAPSHOT'
-  buildTasks = ['build']
+  buildTasks = ['quarkusBuild']
   ignoredSnapshotDependencies = []
   versionPatterns = [
     /(\d+)([^\d]*$)/: { Matcher m, Project p -> m.replaceAll("${(m[0][1] as int) + 1}${m[0][2]}") }

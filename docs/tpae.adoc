@@ -1,0 +1,23 @@
+= TPAE REST sample URL
+A. Costa
+:toc: left
+:toclevels: 2
+:description: Sample TPAE REST URL.
+
+== URL
+
+[cols="1,6m",options="header"]
+|===
+
+|  | URL
+
+| INVBALANCES
+| `http://<maximo_ip_address>:9080/maxrest/rest/mbo/invbalances?siteid=BEDFORD&_includecols=SITEID,LOCATION,ITEMNUM,BINNUM&_format=json&_lid=wilson&_lpwd=wilson`
+
+| ITEM
+| `http://<maximo_ip_address>:9080/maxrest/rest/mbo/item?_format=json&_lid=wilson&_lpwd=wilson&itemset=SET1&ITEMTYPE=ITEM`
+
+| User Where (`_uw`)
+| `http://<maximo_ip_address>:9080/maxrest/rest/mbo/invbalances?siteid=BEDFORD&_includecols=SITEID,LOCATION,ITEMNUM,BINNUM&_format=json&_lid=wilson&_lpwd=wilson&_uw=exists%20(select%201%20from%20item%20where%20invbalances.itemnum=item.itemnum%20and%20item.itemtype=%27ITEM%27)`
+
+|===

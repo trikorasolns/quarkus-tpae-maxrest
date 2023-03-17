@@ -1,0 +1,119 @@
+= TPAE MAXREST REST Client
+A. Costa, <a dot costa at trikorasolutions dot com>
+:description: REST Client for TPAE MAXREST.
+:icons: font
+:revnumber: {docdate}
+:revdate:  {docdate}
+:toc: left
+:toclevels: 3
+
+== Introduction
+
+This project is our https://quarkus.io/guides/rest-client[reactive rest
+client] implementation for the Tivoli Process Automation Engine (TPAE)
+`maxrest` API. It’s a common engine for IBM Maximo Asset Management and
+IBM Control Desk.
+
+== Configure dependency
+
+The project is published at the GitHub Maven Repository.
+
+=== Gradle
+
+[source,groovy]
+----
+maven("https://raw.githubusercontent.com/trikorasolns/quarkus-tpae-maxrest/BRANCH/releases")
+----
+
+=== Maven
+
+Add a profile with the github Maven repository.
+
+[source,xml]
+----
+
+----
+
+And then add the dependency.
+
+[source,xml]
+----
+<dependency>
+  <groupId>com.trikorasolutions.quarkus.tpae.rest</groupId>
+  <artifactId>quarkus-tpae-maxrest</artifactId>
+  <version>0.0.3.Final</version>
+</dependency>
+----
+
+[NOTE]
+====
+More information at the https://github.com/trikorasolns/quarkus-tpae-maxrest/packages/[project package
+page].
+====
+
+== Build
+
+[source,bash]
+----
+./gradlew clean  quarkusBuild
+----
+
+____
+NOTE: The https://github.com/kordamp/jandex-gradle-plugin[jandex] plugin
+is used to help in the CDI process of this library.
+____
+
+== Run
+
+To run the application in development mode launch.
+
+[source,bash]
+----
+./gradlew quarkusDev
+----
+
+== Test
+
+The test target is the rest client target itself. It’s defined in the
+`application.properties` file.
+
+[source,bash]
+----
+./gradlew check
+----
+
+== Usage
+
+=== Basic Authentication
+
+Rest methods include Basic authentication functionality by passing the
+_Authorization_ in the TPAE REST call.
+
+To use the basic authentication functionality filling in the tpae.user
+and tpae.password properties is required. Moreover, it is required that
+_null_ is passed into the uid and pwd (_lid and _lpwd) parameters.
+
+== Release
+
+=== Gradle Release
+
+[source,bash]
+----
+./gradlew release
+----
+
+=== Publish package to GitHub
+
+[source,bash]
+----
+./gradlew publish -PGitHubUsername=<github_user> -PGitHubPassword=<github_token>
+----
+
+=== Maven Local
+
+TBD
+
+[source,bash]
+----
+./gradlew quarkusBuild jar publishToMavenLocal
+----

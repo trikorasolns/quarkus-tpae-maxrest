@@ -6,10 +6,13 @@ plugins {
   id 'org.kordamp.gradle.jandex'
   id 'net.researchgate.release'
   id 'maven-publish'
+  id 'checkstyle'
+  id 'pmd'
+  id 'idea'
 }
 
 group 'com.trikorasolutions.quarkus.tpae.rest'
-description 'Trikora Solutions :: Middleware :: IBM Maximo Rest'
+description 'Trikora Solutions :: Middleware :: TPAE Rest'
 
 defaultTasks 'quarkusBuild', 'check'
 
@@ -128,15 +131,22 @@ repositories {
 }
 
 // ### PLUGINS ####
-apply plugin: 'java'
-apply plugin: JavaPlugin
-apply plugin: 'maven'
-apply plugin: 'maven-publish'
-apply plugin: 'idea'
-apply plugin: 'org.kordamp.gradle.jandex'
+//apply plugin: JavaPlugin
+//apply plugin: 'maven'
+//apply plugin: 'java'
+//apply plugin: 'maven-publish'
+//apply plugin: 'idea'
+//apply plugin: 'org.kordamp.gradle.jandex'
+//apply plugin: 'pmd'
 
 compileJava {
-  options.fork = true
+//  options.fork = true
+  options.encoding = 'UTF-8'
+  options.compilerArgs << '-parameters'
+}
+
+compileTestJava {
+//  options.fork = true
   options.encoding = 'UTF-8'
   options.compilerArgs << '-parameters'
 }
@@ -147,56 +157,71 @@ java {
 }
 
 test {
+//  exclude '**/**IT'
   systemProperty "java.util.logging.manager", "org.jboss.logmanager.LogManager"
 }
 
-sourceSets {
-  main {
-    java {
-      srcDirs = ['src/main/java']
-    }
-    resources {
-      srcDir 'src/main/resources'
-    }
-  }
-
-  test {
-    java {
-      srcDirs = ['src/test/java']
-    }
-    resources {
-      srcDir 'src/test/resources'
-    }
-  }
-}
+//sourceSets {
+//  main {
+//    java {
+//      srcDirs = ['src/main/java']
+//    }
+//    resources {
+//      srcDir 'src/main/resources'
+//    }
+//  }
+//
+//  test {
+//    java {
+//      srcDirs = ['src/test/java']
+//    }
+//    resources {
+//      srcDir 'src/test/resources'
+//    }
+//  }
+//}
 
 // Resources filter.
-processResources {
-  Properties gradleProps = new Properties()
-  gradleProps.load(new FileInputStream(rootDir.toString() + '/gradle.properties'))
-  filter(org.apache.tools.ant.filters.ReplaceTokens, tokens: gradleProps)
-  filter(org.apache.tools.ant.filters.ReplaceTokens, tokens: [
-    artifactId: project.name
-  ])
-}
+//processResources {
+//  Properties gradleProps = new Properties()
+//  gradleProps.load(new FileInputStream(rootDir.toString() + '/gradle.properties'))
+//  filter(org.apache.tools.ant.filters.ReplaceTokens, tokens: gradleProps)
+//  filter(org.apache.tools.ant.filters.ReplaceTokens, tokens: [
+//    artifactId: project.name
+//  ])
+//}
 
-test {
-  systemProperties(System.getProperties())
-}
+//test {
+//  systemProperties(System.getProperties())
+//}
 
 dependencies {
   // Quarkus
   implementation enforcedPlatform([group: quarkusPlatformGroupId, name: quarkusPlatformArtifactId, version: quarkusPlatformVersion])
+  implementation 'io.quarkus:quarkus-arc'
   // Rest
-  implementation([group: 'io.quarkus', name: 'quarkus-resteasy-mutiny'])
-  implementation([group: 'io.quarkus', name: 'quarkus-rest-client'])
-  // Reactive
-  implementation([group: 'io.quarkus', name: 'quarkus-vertx'])
-  implementation([group: 'io.quarkus', name: 'quarkus-vertx-web'])
-  implementation([group: 'io.smallrye.reactive', name: 'smallrye-mutiny-vertx-web-client'])
+//  implementation([group: 'io.quarkus', name: 'quarkus-resteasy-mutiny'])
+//  implementation([group: 'io.quarkus', name: 'quarkus-rest-client'])
+//  implementation([group: 'io.quarkus', name: 'quarkus-rest-client-jackson'])
+  implementation 'io.rest-assured:rest-assured'
 
-  testImplementation([group: 'io.quarkus', name: 'quarkus-junit5'])
-  testImplementation([group: 'io.rest-assured', name: 'rest-assured', version: '4.0.0', changing: false])
+  // Reactive
+  implementation 'io.quarkus:quarkus-resteasy-reactive'
+  implementation 'io.quarkus:quarkus-resteasy-reactive-jackson'
+  implementation([group: 'io.quarkus', name: 'quarkus-rest-client-reactive'])
+  implementation([group: 'io.quarkus', name: 'quarkus-rest-client-reactive-jackson'])
+//  implementation([group: 'io.quarkus', name: 'resteasy-reactive-jackson'])
+//  implementation([group: 'io.quarkus', name: 'rest-client-reactive-jackson'])
+//  implementation([group: 'io.smallrye.reactive', name: 'smallrye-mutiny-vertx-web-client'])
+
+  // Test
+  testImplementation 'io.quarkus:quarkus-junit5'
+//  testImplementation 'io.quarkus:quarkus-junit5-mockito'
+  testImplementation 'io.rest-assured:rest-assured'
+  testImplementation("com.github.tomakehurst:wiremock-jre8:$wiremockVersion")
+//  testImplementation([group: 'org.testcontainers', name: 'testcontainers', version: testContainersVersion])
+  testImplementation 'io.quarkus:quarkus-test-vertx'
+  testImplementation "org.assertj:assertj-core:${assertjCoreVersion}"
 }
 
 // release

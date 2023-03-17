@@ -1,0 +1,68 @@
+{
+  "ITEMMboSet": {
+    "rsStart": 0,
+    "rsCount": 3,
+    "ITEM": [
+      {
+        "rowstamp": "94752",
+        "Attributes": {
+          "ITEMSETID": {
+            "content": "SET1"
+          },
+          "STATUS": {
+            "content": "ACTIVE"
+          },
+          "DESCRIPTION": {
+            "content": "CS Bomba centr\u00edfuga 100 GPM, 60 FT-HD"
+          },
+          "ROTATING": {
+            "content": true
+          },
+          "ITEMNUM": {
+            "content": "CSPUMP10"
+          }
+        }
+      },
+      {
+        "rowstamp": "94460",
+        "Attributes": {
+          "ITEMSETID": {
+            "content": "SET1"
+          },
+          "STATUS": {
+            "content": "ACTIVE"
+          },
+          "DESCRIPTION": {
+            "content": "Bombra de presi\u00f3n"
+          },
+          "ROTATING": {
+            "content": true
+          },
+          "ITEMNUM": {
+            "content": "HP_PUMP"
+          }
+        }
+      },
+      {
+        "rowstamp": "94665",
+        "Attributes": {
+          "ITEMSETID": {
+            "content": "SET1"
+          },
+          "STATUS": {
+            "content": "ACTIVE"
+          },
+          "DESCRIPTION": {
+            "content": "Bomba centr\u00edfuga 100 GPM, 60 FT-HD"
+          },
+          "ROTATING": {
+            "content": true
+          },
+          "ITEMNUM": {
+            "content": "PUMP100"
+          }
+        }
+      }
+    ]
+  }
+}

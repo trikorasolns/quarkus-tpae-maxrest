@@ -35,6 +35,15 @@ The test target is the rest client target itself. It's defined in the `applicati
 $ ./gradlew check
 ```
 
+# Usage
+
+## Basic Authentication
+
+Rest methods include Basic authentication functionality by passing the *Authorization* in the TPAE REST call.
+
+To use the basic authentication functionality filling in the <i>tpae.user</i> and <i>tpae.password</i> properties is required.
+Moreover, it is required that *null* is passed into the <i>uid</i> and <i>pwd</i> (<i>_lid</i> and <i>_lpwd</i>) parameters.
+
 # Release
 
 ## Gradle Release

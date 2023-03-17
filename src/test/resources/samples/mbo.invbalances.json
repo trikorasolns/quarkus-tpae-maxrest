@@ -1,0 +1,56 @@
+{
+  "INVBALANCESMboSet": {
+    "rsStart": 0,
+    "rsCount": 3,
+    "INVBALANCES": [
+      {
+        "rowstamp": "89830",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "61503"
+          }
+        }
+      },
+      {
+        "rowstamp": "89410",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "A-3-4"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "251105"
+          }
+        }
+      },
+      {
+        "rowstamp": "89411",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "A-5-7"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "0-7205"
+          }
+        }
+      }
+    ]
+  }
+}

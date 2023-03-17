@@ -1,4 +1,4 @@
-package com.trikorasolutions.mw.eam.maximo.rest.service.mbo.workorder;
+package com.trikorasolutions.mw.eam.maximo.rest.service.os.workorder;
 
 import com.trikorasolutions.mw.eam.maximo.rest.service.related.MaxRelatedDoclinksService;
 import com.trikorasolutions.mw.eam.maximo.rest.service.related.MaxRelatedMaterialsService;

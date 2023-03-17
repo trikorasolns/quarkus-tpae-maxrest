@@ -5,9 +5,9 @@ import io.smallrye.mutiny.Multi;
 import io.smallrye.mutiny.Uni;
 import io.vertx.core.json.JsonObject;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
-import org.jboss.resteasy.annotations.jaxrs.HeaderParam;
-import org.jboss.resteasy.annotations.jaxrs.PathParam;
-import org.jboss.resteasy.annotations.jaxrs.QueryParam;
+import javax.ws.rs.HeaderParam;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.QueryParam;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -33,7 +33,7 @@ public interface MaxMboLaborTransactionsService extends MaxRestCommonService {
   @PUT
   @Path("/{id}")
   @Produces("application/json")
-  Uni<JsonObject> modifyLt(@QueryParam("_lid") String uid, @QueryParam("_lpwd") String pwd, @PathParam String id, @QueryParam("laborcode") String laborcode
+  Uni<JsonObject> modifyLt(@QueryParam("_lid") String uid, @QueryParam("_lpwd") String pwd, @PathParam("id") String id, @QueryParam("laborcode") String laborcode
       , @QueryParam("crew") String crew, @QueryParam("refwo") String refwo, @QueryParam("startdate") String startdate
       , @QueryParam("finishdate") String finishdate, @QueryParam("starttime") String starttime, @QueryParam("finishtime") String finishtime
       , @QueryParam("regularhrs") String regularhrs, @QueryParam("premiumpayhours") String premiumpayhours, @QueryParam("premiumpaycode") String premiumpaycode
@@ -42,13 +42,13 @@ public interface MaxMboLaborTransactionsService extends MaxRestCommonService {
 //  @PUT
 //  @Path("/{id}")
 //  @Produces("application/json")
-//  Uni<JsonObject> modify(@QueryParam("_lid") String uid, @QueryParam("_lpwd") String pwd, @PathParam String id, Map<String, String> multiValueMap);
+//  Uni<JsonObject> modify(@QueryParam("_lid") String uid, @QueryParam("_lpwd") String pwd, @PathParam("id") String id, Map<String, String> multiValueMap);
 
 
 //  @GET
 //  @Path("/{id}")
 //  @Produces("application/json")
-//  Uni<JsonObject>  getById(@QueryParam("_lid") String uid, @QueryParam("_lpwd") String pwd, @PathParam String id, Map<String, String> multiValueMap);
+//  Uni<JsonObject>  getById(@QueryParam("_lid") String uid, @QueryParam("_lpwd") String pwd, @PathParam("id") String id, Map<String, String> multiValueMap);
 
 //  @GET
 //  @Path("/")
@@ -58,6 +58,6 @@ public interface MaxMboLaborTransactionsService extends MaxRestCommonService {
 //  @POST
 //  @Path("/{id}")
 //  @Produces("application/json")
-//  Uni<JsonObject> changeStatus(@QueryParam("_lid") String uid, @QueryParam("_lpwd") String pwd, @HeaderParam("x-http-method-override") String method, @PathParam String id, @QueryParam("~wo") String workorder, @QueryParam("~status") String status, @QueryParam("~date") String date, @QueryParam("~memo") String memo);
+//  Uni<JsonObject> changeStatus(@QueryParam("_lid") String uid, @QueryParam("_lpwd") String pwd, @HeaderParam("x-http-method-override") String method, @PathParam("id") String id, @QueryParam("~wo") String workorder, @QueryParam("~status") String status, @QueryParam("~date") String date, @QueryParam("~memo") String memo);
 
 }

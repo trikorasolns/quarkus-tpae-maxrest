@@ -2,8 +2,8 @@ package com.trikorasolutions.mw.eam.maximo.rest.service.related;
 
 import io.smallrye.mutiny.Uni;
 import io.vertx.core.json.JsonObject;
-import org.jboss.resteasy.annotations.jaxrs.PathParam;
-import org.jboss.resteasy.annotations.jaxrs.QueryParam;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.QueryParam;
 
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
@@ -14,7 +14,7 @@ public interface MaxRelatedMaterialsService {
   @PUT
   @Path("/{id}")
   @Produces("application/json")
-  Uni<JsonObject> addMaterials(@QueryParam("_lid") String uid, @QueryParam("_lpwd") String pwd, @PathParam String id
+  Uni<JsonObject> addMaterials(@QueryParam("_lid") String uid, @QueryParam("_lpwd") String pwd, @PathParam("id") String id
       , @QueryParam("matusetrans.id1.itemnum") String itemnum, @QueryParam("matusetrans.id1.description") String description
       , @QueryParam("matusetrans.id1.rotassetnum") String rotassetnum, @QueryParam("matusetrans.id1.quantity") String quantity
       , @QueryParam("matusetrans.id1.issuetype") String issuetype, @QueryParam("matusetrans.id1.actualdate") String actualdate

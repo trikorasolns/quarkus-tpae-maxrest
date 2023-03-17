@@ -8,7 +8,7 @@ import javax.ws.rs.client.ClientRequestFilter;
 import javax.ws.rs.core.UriBuilder;
 import javax.ws.rs.ext.Provider;
 
-@Provider
+//@Provider
 public class PostMessageBodyFilter implements ClientRequestFilter {
   @Override
   public void filter(ClientRequestContext requestContext) throws IOException {

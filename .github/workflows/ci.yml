@@ -1,4 +1,4 @@
-name: Quarkus CI
+name: Quarkus Build
 
 on: [push]
 

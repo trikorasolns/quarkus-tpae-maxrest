@@ -15,4 +15,4 @@ jobs:
           distribution: temurin
           java-version: 11
       - name: Build project
-        run: ./gradlew quarkusBuild
+        run: ./gradlew test

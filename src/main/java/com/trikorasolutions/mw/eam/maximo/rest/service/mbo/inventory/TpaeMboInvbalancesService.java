@@ -1,6 +1,7 @@
 package com.trikorasolutions.mw.eam.maximo.rest.service.mbo.inventory;
 
 import com.trikorasolutions.mw.eam.maximo.rest.service.common.MaxRestCommonGetService;
+import io.quarkus.arc.DefaultBean;
 import io.smallrye.mutiny.Uni;
 import io.vertx.core.json.JsonObject;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
@@ -13,8 +14,11 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import java.util.Map;
 
+@DefaultBean
 @Path("/mbo/invbalances")
 @RegisterRestClient(configKey = "tpae-api")
+@Produces(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)
 public interface TpaeMboInvbalancesService extends MaxRestCommonGetService {
 
   @GET

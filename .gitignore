@@ -17,7 +17,6 @@ logs/
 out/
 neo4j_DB/
 
-
 # log files
 *.log
 
@@ -50,6 +49,8 @@ rebel.xml
 #gradle/wrapper/gradle-wrapper.properties
 #!gradle/wrapper/gradle-wrapper.jar
 
+# SDKMAN
+#/.sdkmanrc
 
 # Created by https://www.gitignore.io/api/gradle,intellij
 
@@ -137,4 +138,3 @@ gradle-app.setting
 
 
 # End of https://www.gitignore.io/api/gradle,intellij
-/.sdkmanrc

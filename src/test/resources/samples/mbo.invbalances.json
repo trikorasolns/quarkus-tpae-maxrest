@@ -1,0 +1,2388 @@
+{
+  "INVBALANCESMboSet": {
+    "rsStart": 0,
+    "rsCount": 149,
+    "INVBALANCES": [
+      {
+        "rowstamp": "89830",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "61503"
+          }
+        }
+      },
+      {
+        "rowstamp": "89410",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "A-3-4"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "251105"
+          }
+        }
+      },
+      {
+        "rowstamp": "89411",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "A-5-7"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "0-7205"
+          }
+        }
+      },
+      {
+        "rowstamp": "89413",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "A-4-1"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "XMP-3500"
+          }
+        }
+      },
+      {
+        "rowstamp": "89414",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "B-2-6"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "251111"
+          }
+        }
+      },
+      {
+        "rowstamp": "89415",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "A-5-7"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "227132"
+          }
+        }
+      },
+      {
+        "rowstamp": "89419",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "A-9-6"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "52-130"
+          }
+        }
+      },
+      {
+        "rowstamp": "89428",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "B-5-1"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "0G3582"
+          }
+        }
+      },
+      {
+        "rowstamp": "1448193",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "A-9-3"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "Z-RAGS"
+          }
+        }
+      },
+      {
+        "rowstamp": "89430",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "D-4-1"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "Z-LG1"
+          }
+        }
+      },
+      {
+        "rowstamp": "89431",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "C-5-2"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "XMP-4000"
+          }
+        }
+      },
+      {
+        "rowstamp": "89432",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "B-7-2"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "XMP-4200"
+          }
+        }
+      },
+      {
+        "rowstamp": "89433",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "D-9-5"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "XMP-9500"
+          }
+        }
+      },
+      {
+        "rowstamp": "89434",
+        "Attributes": {
+          "LOCATION": {
+            "content": "MACHSHOP"
+          },
+          "BINNUM": {
+            "content": "A-3-7"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "560-00"
+          }
+        }
+      },
+      {
+        "rowstamp": "89435",
+        "Attributes": {
+          "LOCATION": {
+            "content": "PKG"
+          },
+          "BINNUM": {
+            "content": "C-4-1"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "560-00"
+          }
+        }
+      },
+      {
+        "rowstamp": "89436",
+        "Attributes": {
+          "LOCATION": {
+            "content": "PKG"
+          },
+          "BINNUM": {
+            "content": "A-5-9"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "RMOTOR"
+          }
+        }
+      },
+      {
+        "rowstamp": "89437",
+        "Attributes": {
+          "LOCATION": {
+            "content": "PKG"
+          },
+          "BINNUM": {
+            "content": "C-3-6"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "EB12"
+          }
+        }
+      },
+      {
+        "rowstamp": "89438",
+        "Attributes": {
+          "LOCATION": {
+            "content": "PKG"
+          },
+          "BINNUM": {
+            "content": "D-5-2"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "12853"
+          }
+        }
+      },
+      {
+        "rowstamp": "89439",
+        "Attributes": {
+          "LOCATION": {
+            "content": "PKG"
+          },
+          "BINNUM": {
+            "content": "D-9-4"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "10112"
+          }
+        }
+      },
+      {
+        "rowstamp": "89440",
+        "Attributes": {
+          "LOCATION": {
+            "content": "PKG"
+          },
+          "BINNUM": {
+            "content": "D-4-2"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "20778"
+          }
+        }
+      },
+      {
+        "rowstamp": "89441",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "A-5-6"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "11406"
+          }
+        }
+      },
+      {
+        "rowstamp": "89442",
+        "Attributes": {
+          "LOCATION": {
+            "content": "PKG"
+          },
+          "BINNUM": {
+            "content": "A-4-2"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "53-143"
+          }
+        }
+      },
+      {
+        "rowstamp": "89443",
+        "Attributes": {
+          "LOCATION": {
+            "content": "PKG"
+          },
+          "BINNUM": {
+            "content": "C-4-1"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "43992"
+          }
+        }
+      },
+      {
+        "rowstamp": "89444",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "B-5-1"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "39224"
+          }
+        }
+      },
+      {
+        "rowstamp": "89445",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "B-5-2"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "12853"
+          }
+        }
+      },
+      {
+        "rowstamp": "89446",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "B-5-8"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "20778"
+          }
+        }
+      },
+      {
+        "rowstamp": "89447",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "B-7-2"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "FLT001"
+          }
+        }
+      },
+      {
+        "rowstamp": "89448",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "B-5-1"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "G-1000"
+          }
+        }
+      },
+      {
+        "rowstamp": "89449",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "B-7-3"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "EB12"
+          }
+        }
+      },
+      {
+        "rowstamp": "89450",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "B-7-3"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "10112"
+          }
+        }
+      },
+      {
+        "rowstamp": "89451",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "B-2-6"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "43992"
+          }
+        }
+      },
+      {
+        "rowstamp": "89452",
+        "Attributes": {
+          "LOCATION": {
+            "content": "PKG"
+          },
+          "BINNUM": {
+            "content": "C-5-2"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "29331"
+          }
+        }
+      },
+      {
+        "rowstamp": "89453",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "F-4-2"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "PUMP100"
+          }
+        }
+      },
+      {
+        "rowstamp": "89572",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "A-5-1"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "G23117"
+          }
+        }
+      },
+      {
+        "rowstamp": "89580",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "A-7-3"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "584-L0"
+          }
+        }
+      },
+      {
+        "rowstamp": "89581",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "A-5-1"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "XMP-3200"
+          }
+        }
+      },
+      {
+        "rowstamp": "89582",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "B-7-3"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "53-143"
+          }
+        }
+      },
+      {
+        "rowstamp": "89583",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "F-4-1"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "MOT10"
+          }
+        }
+      },
+      {
+        "rowstamp": "89585",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "D-9-4"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "0-0031"
+          }
+        }
+      },
+      {
+        "rowstamp": "89643",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "386-12"
+          }
+        }
+      },
+      {
+        "rowstamp": "89648",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "D-6-1"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "217215"
+          }
+        }
+      },
+      {
+        "rowstamp": "89658",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "B-9-4"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "11241"
+          }
+        }
+      },
+      {
+        "rowstamp": "89659",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "A-9-2"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "560-00"
+          }
+        }
+      },
+      {
+        "rowstamp": "89667",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "A-4-1"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "570-72"
+          }
+        }
+      },
+      {
+        "rowstamp": "89672",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "A-9-4"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "XMP-3000"
+          }
+        }
+      },
+      {
+        "rowstamp": "89676",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "A-5-1"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "121115"
+          }
+        }
+      },
+      {
+        "rowstamp": "89677",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "A-9-4"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "4-2100"
+          }
+        }
+      },
+      {
+        "rowstamp": "89678",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "B-6-9"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "4-L080"
+          }
+        }
+      },
+      {
+        "rowstamp": "89679",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "B-4-1"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "6-0090"
+          }
+        }
+      },
+      {
+        "rowstamp": "89680",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "A-9-5"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "900810"
+          }
+        }
+      },
+      {
+        "rowstamp": "89681",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "B-4-2"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "231177"
+          }
+        }
+      },
+      {
+        "rowstamp": "89732",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "A-5-2"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "117041"
+          }
+        }
+      },
+      {
+        "rowstamp": "89733",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "C-6-2"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "117084"
+          }
+        }
+      },
+      {
+        "rowstamp": "89734",
+        "Attributes": {
+          "LOCATION": {
+            "content": "PKG"
+          },
+          "BINNUM": {
+            "content": "C-4-1"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "FLT908"
+          }
+        }
+      },
+      {
+        "rowstamp": "89735",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "A-4-9"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "11453"
+          }
+        }
+      },
+      {
+        "rowstamp": "89736",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "C-8-2"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "217219"
+          }
+        }
+      },
+      {
+        "rowstamp": "89737",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "C-5-1"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "217214"
+          }
+        }
+      },
+      {
+        "rowstamp": "89738",
+        "Attributes": {
+          "LOCATION": {
+            "content": "PKG"
+          },
+          "BINNUM": {
+            "content": "A-4-2"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "FLT001"
+          }
+        }
+      },
+      {
+        "rowstamp": "89739",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "D-3-9"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "IKLEEN"
+          }
+        }
+      },
+      {
+        "rowstamp": "89740",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "A-5-1"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "GLOVES"
+          }
+        }
+      },
+      {
+        "rowstamp": "89741",
+        "Attributes": {
+          "LOCATION": {
+            "content": "PKG"
+          },
+          "BINNUM": {
+            "content": "A-5-1"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "G-1000"
+          }
+        }
+      },
+      {
+        "rowstamp": "89742",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "A-5-2"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "84-210"
+          }
+        }
+      },
+      {
+        "rowstamp": "89743",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "B-6-1"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "XXX-0800"
+          }
+        }
+      },
+      {
+        "rowstamp": "89744",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "C-4-1"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "XXX-1500"
+          }
+        }
+      },
+      {
+        "rowstamp": "89745",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "A-3-8"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "217213"
+          }
+        }
+      },
+      {
+        "rowstamp": "89748",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "C-3-6"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "117021"
+          }
+        }
+      },
+      {
+        "rowstamp": "89755",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "A-6-2"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "230-00"
+          }
+        }
+      },
+      {
+        "rowstamp": "89756",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "A-6-2"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "G22713"
+          }
+        }
+      },
+      {
+        "rowstamp": "89767",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "B-8-4"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "0-0048"
+          }
+        }
+      },
+      {
+        "rowstamp": "89768",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "C-4-2"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "0-0514"
+          }
+        }
+      },
+      {
+        "rowstamp": "89769",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "B-8-3"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "TEX115"
+          }
+        }
+      },
+      {
+        "rowstamp": "89770",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "A-5-7"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "4-0030"
+          }
+        }
+      },
+      {
+        "rowstamp": "89771",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "A-3-5"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "8-L690"
+          }
+        }
+      },
+      {
+        "rowstamp": "89772",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "B-6-2"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "FLT908"
+          }
+        }
+      },
+      {
+        "rowstamp": "89774",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "B-4-1"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "6-L203"
+          }
+        }
+      },
+      {
+        "rowstamp": "89806",
+        "Attributes": {
+          "LOCATION": {
+            "content": "HARDWARE"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "D700"
+          }
+        }
+      },
+      {
+        "rowstamp": "89823",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "39224"
+          }
+        }
+      },
+      {
+        "rowstamp": "89824",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "G-5-3"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "11453"
+          }
+        }
+      },
+      {
+        "rowstamp": "89825",
+        "Attributes": {
+          "LOCATION": {
+            "content": "MACHSHOP"
+          },
+          "BINNUM": {
+            "content": "H-5-2"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "11453"
+          }
+        }
+      },
+      {
+        "rowstamp": "89826",
+        "Attributes": {
+          "LOCATION": {
+            "content": "GARAGE"
+          },
+          "BINNUM": {
+            "content": "B-3-5"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "560-00"
+          }
+        }
+      },
+      {
+        "rowstamp": "89827",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "A-4-8"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "29331"
+          }
+        }
+      },
+      {
+        "rowstamp": "89828",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "FIRE-100"
+          }
+        }
+      },
+      {
+        "rowstamp": "89829",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "2-A"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "P-896"
+          }
+        }
+      },
+      {
+        "rowstamp": "89831",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "VS-48"
+          }
+        }
+      },
+      {
+        "rowstamp": "89832",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "28149"
+          }
+        }
+      },
+      {
+        "rowstamp": "89833",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "S-546"
+          }
+        }
+      },
+      {
+        "rowstamp": "89843",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "C-9-4"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "217224"
+          }
+        }
+      },
+      {
+        "rowstamp": "89844",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "A-5-2"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "335029"
+          }
+        }
+      },
+      {
+        "rowstamp": "89852",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "A-4-7"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "60-051"
+          }
+        }
+      },
+      {
+        "rowstamp": "89853",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "1002"
+          }
+        }
+      },
+      {
+        "rowstamp": "89878",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "D-5-1"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "XMP-7000"
+          }
+        }
+      },
+      {
+        "rowstamp": "89926",
+        "Attributes": {
+          "LOCATION": {
+            "content": "PKG"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "BOLT125"
+          }
+        }
+      },
+      {
+        "rowstamp": "89927",
+        "Attributes": {
+          "LOCATION": {
+            "content": "PKG"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "4-2100"
+          }
+        }
+      },
+      {
+        "rowstamp": "89928",
+        "Attributes": {
+          "LOCATION": {
+            "content": "PKG"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "CAPACITOR100"
+          }
+        }
+      },
+      {
+        "rowstamp": "89929",
+        "Attributes": {
+          "LOCATION": {
+            "content": "PKG"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "0-0048"
+          }
+        }
+      },
+      {
+        "rowstamp": "89930",
+        "Attributes": {
+          "LOCATION": {
+            "content": "PKG"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "560-00"
+          }
+        }
+      },
+      {
+        "rowstamp": "89931",
+        "Attributes": {
+          "LOCATION": {
+            "content": "PKG"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "BRACKET"
+          }
+        }
+      },
+      {
+        "rowstamp": "89932",
+        "Attributes": {
+          "LOCATION": {
+            "content": "PKG"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "RESISTOR2112"
+          }
+        }
+      },
+      {
+        "rowstamp": "89933",
+        "Attributes": {
+          "LOCATION": {
+            "content": "GARAGE"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "PUMP100"
+          }
+        }
+      },
+      {
+        "rowstamp": "89934",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "AB1"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "KB27815"
+          }
+        }
+      },
+      {
+        "rowstamp": "89935",
+        "Attributes": {
+          "LOCATION": {
+            "content": "PKG"
+          },
+          "BINNUM": {
+            "content": "OP1"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "KB27815"
+          }
+        }
+      },
+      {
+        "rowstamp": "89936",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "LR1"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "28149"
+          }
+        }
+      },
+      {
+        "rowstamp": "89937",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "LR2"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "28149"
+          }
+        }
+      },
+      {
+        "rowstamp": "89938",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "LR4"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "28149"
+          }
+        }
+      },
+      {
+        "rowstamp": "89939",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "LR5"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "28149"
+          }
+        }
+      },
+      {
+        "rowstamp": "89940",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "LR6"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "28149"
+          }
+        }
+      },
+      {
+        "rowstamp": "89944",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "A-5-1"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "G25110"
+          }
+        }
+      },
+      {
+        "rowstamp": "89953",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "A-3-5"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "XMP-3400"
+          }
+        }
+      },
+      {
+        "rowstamp": "90044",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "N27815"
+          }
+        }
+      },
+      {
+        "rowstamp": "90045",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "N8971V"
+          }
+        }
+      },
+      {
+        "rowstamp": "90046",
+        "Attributes": {
+          "LOCATION": {
+            "content": "GARAGE"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "N8971V"
+          }
+        }
+      },
+      {
+        "rowstamp": "90050",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "11R22.5GS-6"
+          }
+        }
+      },
+      {
+        "rowstamp": "90060",
+        "Attributes": {
+          "LOCATION": {
+            "content": "SOFTWARE"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "ACROBAT_8"
+          }
+        }
+      },
+      {
+        "rowstamp": "90061",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "11R22.5-D"
+          }
+        }
+      },
+      {
+        "rowstamp": "90062",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "11R22.5-D"
+          }
+        }
+      },
+      {
+        "rowstamp": "90063",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "UNLEADED"
+          }
+        }
+      },
+      {
+        "rowstamp": "90065",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "DIESEL"
+          }
+        }
+      },
+      {
+        "rowstamp": "90066",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "LN7023"
+          }
+        }
+      },
+      {
+        "rowstamp": "90069",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "LN7023"
+          }
+        }
+      },
+      {
+        "rowstamp": "90070",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "3030BC"
+          }
+        }
+      },
+      {
+        "rowstamp": "90072",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "LF777"
+          }
+        }
+      },
+      {
+        "rowstamp": "90073",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "FF217"
+          }
+        }
+      },
+      {
+        "rowstamp": "1450514",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "6I-2499"
+          }
+        }
+      },
+      {
+        "rowstamp": "90075",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "6I-2500"
+          }
+        }
+      },
+      {
+        "rowstamp": "90076",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "2951-09-10"
+          }
+        }
+      },
+      {
+        "rowstamp": "90077",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "LN7020"
+          }
+        }
+      },
+      {
+        "rowstamp": "90079",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "WO27815"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "BOLT125"
+          }
+        }
+      },
+      {
+        "rowstamp": "90080",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "WO27815"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "4-2100"
+          }
+        }
+      },
+      {
+        "rowstamp": "90081",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "WO27815"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "CAPACITOR100"
+          }
+        }
+      },
+      {
+        "rowstamp": "90082",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "WO27815"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "0-0048"
+          }
+        }
+      },
+      {
+        "rowstamp": "90083",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "WO27815"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "560-00"
+          }
+        }
+      },
+      {
+        "rowstamp": "90084",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "WO27815"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "RESISTOR2112"
+          }
+        }
+      },
+      {
+        "rowstamp": "90085",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "6-0090"
+          }
+        }
+      },
+      {
+        "rowstamp": "90146",
+        "Attributes": {
+          "LOCATION": {
+            "content": "HARDWARE"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "D600"
+          }
+        }
+      },
+      {
+        "rowstamp": "90147",
+        "Attributes": {
+          "LOCATION": {
+            "content": "SOFTWARE"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "ACCUDRAW"
+          }
+        }
+      },
+      {
+        "rowstamp": "90148",
+        "Attributes": {
+          "LOCATION": {
+            "content": "SOFTWARE"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "VISIO"
+          }
+        }
+      },
+      {
+        "rowstamp": "90149",
+        "Attributes": {
+          "LOCATION": {
+            "content": "HARDWARE"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "D650"
+          }
+        }
+      },
+      {
+        "rowstamp": "90150",
+        "Attributes": {
+          "LOCATION": {
+            "content": "SOFTWARE"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "ANTIVIRUS"
+          }
+        }
+      },
+      {
+        "rowstamp": "90175",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "BINNUM": {
+            "content": "TRAY1"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "CAPACITOR100"
+          }
+        }
+      },
+      {
+        "rowstamp": "90176",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "RESISTOR2112"
+          }
+        }
+      },
+      {
+        "rowstamp": "90177",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "BRACKET"
+          }
+        }
+      },
+      {
+        "rowstamp": "90178",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "BOLT125"
+          }
+        }
+      },
+      {
+        "rowstamp": "90179",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "KIT134"
+          }
+        }
+      },
+      {
+        "rowstamp": "90274",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "VB-512"
+          }
+        }
+      },
+      {
+        "rowstamp": "90275",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "78354"
+          }
+        }
+      },
+      {
+        "rowstamp": "90276",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "MCV-60"
+          }
+        }
+      },
+      {
+        "rowstamp": "90277",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "MOTR-24"
+          }
+        }
+      },
+      {
+        "rowstamp": "90278",
+        "Attributes": {
+          "LOCATION": {
+            "content": "CENTRAL"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "FLT221-A"
+          }
+        }
+      },
+      {
+        "rowstamp": "90279",
+        "Attributes": {
+          "LOCATION": {
+            "content": "PKG"
+          },
+          "SITEID": {
+            "content": "BEDFORD"
+          },
+          "ITEMNUM": {
+            "content": "28149"
+          }
+        }
+      }
+    ]
+  }
+}

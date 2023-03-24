@@ -13,23 +13,15 @@ import javax.ws.rs.Produces;
 import java.util.Map;
 
 public interface MaxRestCommonService {
-  @GET
-  @Path("/")
-  @Produces("application/json")
-  Multi<JsonObject> find(@QueryParam("_lid") String uid, @QueryParam("_lpwd") String pwd, Map<String, String> multiValueMap);
 
-  @GET
-  @Path("/{id}")
-  @Produces("application/json")
-  Uni<JsonObject> findById(@QueryParam("_lid") String uid, @QueryParam("_lpwd") String pwd, @PathParam String id, Map<String, String> multiValueMap);
+    @PUT
+    @Path("/")
+    @Produces("application/json")
+    Uni<JsonObject> add(@QueryParam("_lid") String uid, @QueryParam("_lpwd") String pwd, Map<String, String> multiValueMap);
 
-  @PUT
-  @Path("/")
-  @Produces("application/json")
-  Uni<JsonObject> add(@QueryParam("_lid") String uid, @QueryParam("_lpwd") String pwd, Map<String, String> multiValueMap);
-
-  @PUT
-  @Path("/{id}")
-  @Produces("application/json")
-  Uni<JsonObject> modify(@QueryParam("_lid") String uid, @QueryParam("_lpwd") String pwd, @PathParam String id, Map<String, String> multiValueMap);
+    @PUT
+    @Path("/{id}")
+    @Produces("application/json")
+    Uni<JsonObject> modify(@QueryParam("_lid") String uid, @QueryParam("_lpwd") String pwd, @PathParam String id,
+                           Map<String, String> multiValueMap);
 }

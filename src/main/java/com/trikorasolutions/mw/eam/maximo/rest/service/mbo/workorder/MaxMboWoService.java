@@ -16,7 +16,7 @@ import javax.ws.rs.Produces;
 import java.util.Map;
 
 @Path("/mbo/workorder")
-@RegisterRestClient(configKey = "mam-api")
+@RegisterRestClient(configKey = "tpae-api")
 public interface MaxMboWoService {
 
   @PUT

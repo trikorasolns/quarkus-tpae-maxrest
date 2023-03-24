@@ -12,7 +12,7 @@ import javax.ws.rs.Produces;
 import java.util.Map;
 
 @Path("/mbo/multiassetlocci")
-@RegisterRestClient(configKey = "mam-api")
+@RegisterRestClient(configKey = "tpae-api")
 public interface MaxMboMultiassetService extends MaxRestCommonService {
 
   @GET

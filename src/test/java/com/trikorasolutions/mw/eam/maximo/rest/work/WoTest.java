@@ -1,11 +1,10 @@
-package com.trikorasolutions.mw.eam.maximo.rest.test.work;
+package com.trikorasolutions.mw.eam.maximo.rest.work;
 
 import com.trikorasolutions.mw.eam.maximo.rest.impl.workorder.MaximoRestWorkorderServiceImpl;
 import io.quarkus.test.junit.QuarkusTest;
 import io.vertx.core.json.JsonObject;
 import org.eclipse.microprofile.config.ConfigProvider;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

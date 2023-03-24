@@ -16,4 +16,8 @@ public class TpaeMaxRestConstants {
    */
   public final static String REST_PARAM_INCLUDECOLS = "_includecols";
 
+
+  public final static String MBO_ATTRIBUTES = "Attributes";
+
+  public final static String MBO_ATTRIBUTE_CONTENT = "content";
 }

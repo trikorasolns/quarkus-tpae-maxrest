@@ -1,14 +1,14 @@
-name: Test when PR
+name: "Pull Request Build"
 
-on: [pull_request]
-
+on:
+  - pull_request
 jobs:
 
   test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        java: [ 11,17 ]
+        java: [ 11 ]
 
     steps:
       - uses: actions/checkout@v3

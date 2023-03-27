@@ -41,7 +41,7 @@ public interface TpaeOsAssetService extends MaxRestCommonGetService {
                                        @QueryParam("assetmeter.id1.measurement.id2.measurementvalue") String measurementvalue,
                                        @QueryParam("assetmeter.id1.measurement.id2.measuredate") String measuredate,
                                        @QueryParam("assetmeter.id1.measurement.id2.inspector") String inspector,
-                                       @QueryParam("assetmeter.id1.measurement.id2.observation") String inspector,
+                                       @QueryParam("assetmeter.id1.measurement.id2.observation") String observation,
                                        Map<String, String> multiValueMap);
 
 }

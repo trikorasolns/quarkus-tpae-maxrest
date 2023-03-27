@@ -2,7 +2,7 @@ package com.trikorasolutions.mw.eam.maximo.rest.service.mbo.asset;
 
 import com.trikorasolutions.mw.eam.maximo.rest.TpaeMaxRestConstants;
 import com.trikorasolutions.mw.eam.maximo.rest.service.common.MaxRestCommonGetService;
-import io.smallrye.mutiny.Multi;
+import io.smallrye.mutiny.Uni;
 import io.vertx.core.json.JsonObject;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
@@ -17,9 +17,9 @@ public interface TpaeMboLocationService extends MaxRestCommonGetService {
 
     @GET
     @Path("/")
-    Multi<JsonObject> getByLocation(@QueryParam("_lid") String uid, @QueryParam("_lpwd") String pwd,
-                                    @QueryParam(TpaeMaxRestConstants.SITE_ID) String siteid,
-                                    @QueryParam("location") String assetnum,
-                                    Map<String, String> multiValueMap);
+    Uni<JsonObject> getByLocation(@QueryParam("_lid") String uid, @QueryParam("_lpwd") String pwd,
+                                  @QueryParam(TpaeMaxRestConstants.SITE_ID) String siteid,
+                                  @QueryParam("location") String assetnum,
+                                  Map<String, String> multiValueMap);
 
 }

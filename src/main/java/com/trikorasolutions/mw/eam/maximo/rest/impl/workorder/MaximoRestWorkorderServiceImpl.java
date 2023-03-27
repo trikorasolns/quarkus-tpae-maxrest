@@ -3,7 +3,7 @@
  */
 package com.trikorasolutions.mw.eam.maximo.rest.impl.workorder;
 
-import com.trikorasolutions.mw.eam.maximo.rest.service.mbo.workorder.MaxMboWoService;
+import com.trikorasolutions.mw.eam.maximo.rest.service.mbo.workorder.TpaeMboWorkorderService;
 import com.trikorasolutions.mw.eam.maximo.rest.service.os.workorder.MaxOsWoService;
 import io.smallrye.mutiny.Uni;
 import io.vertx.core.json.JsonObject;
@@ -45,7 +45,7 @@ public class MaximoRestWorkorderServiceImpl {
 
   @Inject
   @RestClient
-  MaxMboWoService woMboService;
+  TpaeMboWorkorderService woMboService;
 
   @Inject
   @RestClient

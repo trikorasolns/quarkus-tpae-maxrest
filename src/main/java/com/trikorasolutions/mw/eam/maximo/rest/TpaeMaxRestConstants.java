@@ -20,4 +20,8 @@ public class TpaeMaxRestConstants {
   public final static String MBO_ATTRIBUTES = "Attributes";
 
   public final static String MBO_ATTRIBUTE_CONTENT = "content";
+
+  // Attributes
+  public final static String SITE_ID = "siteid";
+
 }

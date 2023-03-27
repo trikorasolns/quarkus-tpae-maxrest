@@ -24,4 +24,5 @@ public interface MaxRestCommonService {
     @Produces("application/json")
     Uni<JsonObject> modify(@QueryParam("_lid") String uid, @QueryParam("_lpwd") String pwd, @PathParam("id") String id,
                            Map<String, String> multiValueMap);
+
 }

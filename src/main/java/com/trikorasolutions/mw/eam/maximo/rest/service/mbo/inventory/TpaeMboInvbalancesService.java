@@ -1,5 +1,6 @@
 package com.trikorasolutions.mw.eam.maximo.rest.service.mbo.inventory;
 
+import com.trikorasolutions.mw.eam.maximo.rest.TpaeMaxRestConstants;
 import com.trikorasolutions.mw.eam.maximo.rest.service.common.MaxRestCommonGetService;
 import io.quarkus.arc.DefaultBean;
 import io.smallrye.mutiny.Uni;
@@ -21,18 +22,21 @@ import java.util.Map;
 @Consumes(MediaType.APPLICATION_JSON)
 public interface TpaeMboInvbalancesService extends MaxRestCommonGetService {
 
-  @GET
-  @Path("/")
-  @Produces(MediaType.APPLICATION_JSON)
-  @Consumes(MediaType.APPLICATION_JSON)
-  Uni<JsonObject> queryItemset(@QueryParam("_lid") String uid, @QueryParam("_lpwd") String pwd, @QueryParam("itemset") String itemset,
-                           Map<String, String> multiValueMap);
+    @GET
+    @Path("/")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    Uni<JsonObject> queryItemset(@QueryParam("_lid") String uid, @QueryParam("_lpwd") String pwd,
+                                 @QueryParam("itemset") String itemset,
+                                 Map<String, String> multiValueMap);
 
-  @GET
-  @Path("/")
-  @Produces(MediaType.APPLICATION_JSON)
-  @Consumes(MediaType.APPLICATION_JSON)
-  Uni<JsonObject> queryItemsetSite(@QueryParam("_lid") String uid, @QueryParam("_lpwd") String pwd, @QueryParam("itemset") String itemset, @QueryParam("siteid") String site,
-                                   Map<String, String> multiValueMap);
+    @GET
+    @Path("/")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    Uni<JsonObject> queryItemsetSite(@QueryParam("_lid") String uid, @QueryParam("_lpwd") String pwd,
+                                     @QueryParam("itemset") String itemset,
+                                     @QueryParam(TpaeMaxRestConstants.SITE_ID) String site,
+                                     Map<String, String> multiValueMap);
 
 }

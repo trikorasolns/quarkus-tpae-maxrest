@@ -1,7 +1,6 @@
 package com.trikorasolutions.mw.eam.maximo.rest.wiremock;
 
 import com.github.tomakehurst.wiremock.WireMockServer;
-import com.github.tomakehurst.wiremock.core.WireMockConfiguration;
 import com.trikorasolutions.mw.eam.maximo.rest.HelperFunctions;
 import com.trikorasolutions.mw.eam.maximo.rest.TpaeMaxRestConstants;
 import io.quarkus.test.common.QuarkusTestResourceLifecycleManager;
@@ -11,14 +10,10 @@ import org.slf4j.LoggerFactory;
 import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.Collections;
 import java.util.Map;
 
 import static com.github.tomakehurst.wiremock.client.WireMock.aResponse;
 import static com.github.tomakehurst.wiremock.client.WireMock.get;
-import static com.github.tomakehurst.wiremock.client.WireMock.notContaining;
 import static com.github.tomakehurst.wiremock.client.WireMock.urlEqualTo;
 import static com.github.tomakehurst.wiremock.client.WireMock.urlMatching;
 
